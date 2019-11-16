@@ -33,5 +33,6 @@
 	<dimen name="drawer_item_size">150dp</dimen>
 	<dimen name="drawer_item_padding">24dp</dimen>
 	<dimen name="drawer_item_font_size">@dimen/text_subheading</dimen>
+	<dimen name="design_bottom_navigation_active_text_size">12sp</dimen>
 
 </resources>
