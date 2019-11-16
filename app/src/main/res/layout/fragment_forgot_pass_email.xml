@@ -12,7 +12,7 @@
         android:paddingTop="@dimen/vertical_margin"
         android:textAllCaps="true" />
 
-    <br.com.mobile2you.m2ybase.ui.widget.AppTextInputLayout
+    <br.com.joaopaulosj.vanhackathon2019.ui.widget.AppTextInputLayout
         android:id="@+id/forgotPassEmailEt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,14 +32,14 @@
             android:paddingTop="4dp"
             android:textColor="@color/color_white" />
 
-    </br.com.mobile2you.m2ybase.ui.widget.AppTextInputLayout>
+    </br.com.joaopaulosj.vanhackathon2019.ui.widget.AppTextInputLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <br.com.mobile2you.m2ybase.ui.widget.ProgressButton
+    <br.com.joaopaulosj.vanhackathon2019.ui.widget.ProgressButton
         android:id="@+id/forgotPassEmailBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="@color/colorPrimary"
-    tools:context="br.com.mobile2you.m2ybase.ui.login.LoginActivity">
+    tools:context="br.com.joaopaulosj.vanhackathon2019.ui.login.LoginActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
-                <br.com.mobile2you.m2ybase.ui.widget.AppTextInputLayout
+                <br.com.joaopaulosj.vanhackathon2019.ui.widget.AppTextInputLayout
                     android:id="@+id/loginEmailEt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -48,14 +48,14 @@
                         android:paddingTop="4dp"
                         android:textColor="@color/color_white" />
 
-                </br.com.mobile2you.m2ybase.ui.widget.AppTextInputLayout>
+                </br.com.joaopaulosj.vanhackathon2019.ui.widget.AppTextInputLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/color_white" />
 
-                <br.com.mobile2you.m2ybase.ui.widget.AppTextInputLayout
+                <br.com.joaopaulosj.vanhackathon2019.ui.widget.AppTextInputLayout
                     android:id="@+id/loginPassEt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                         android:paddingTop="4dp"
                         android:textColor="@color/color_white" />
 
-                </br.com.mobile2you.m2ybase.ui.widget.AppTextInputLayout>
+                </br.com.joaopaulosj.vanhackathon2019.ui.widget.AppTextInputLayout>
 
             </LinearLayout>
 
@@ -93,7 +93,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <br.com.mobile2you.m2ybase.ui.widget.ProgressButton
+            <br.com.joaopaulosj.vanhackathon2019.ui.widget.ProgressButton
                 android:id="@+id/loginSigninBtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

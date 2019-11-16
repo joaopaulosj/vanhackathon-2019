@@ -37,7 +37,7 @@
         tools:lines="2"
         tools:text="@tools:sample/lorem/random" />
 
-    <br.com.mobile2you.m2ybase.ui.widget.ProgressButton
+    <br.com.joaopaulosj.vanhackathon2019.ui.widget.ProgressButton
         android:id="@+id/itemDefaultBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

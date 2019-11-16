@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.mobile2you.m2ybase">
+    package="br.com.joaopaulosj.vanhackathon2019">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name=".BaseApplication"
+        android:name="br.com.joaopaulosj.vanhackathon2019.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="${appName}"
@@ -14,12 +14,12 @@
         android:theme="@style/AppTheme">
 
         <!-- FIREBASE MESSAGING -->
-        <service android:name=".data.remote.firebase.FbInstaceIdService">
+        <service android:name="br.com.joaopaulosj.vanhackathon2019.data.remote.firebase.FbInstaceIdService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".data.remote.firebase.FirebaseMessagingService">
+        <service android:name="br.com.joaopaulosj.vanhackathon2019.data.remote.firebase.FirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -51,7 +51,7 @@
 
         <!-- ACTIVITIES -->
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name="br.com.joaopaulosj.vanhackathon2019.ui.splash.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,12 +59,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.common.ExpandedPictureActivity" />
-        <activity android:name=".ui.common.WebViewActivity" />
-        <activity android:name=".ui.simplelist.SimpleListActivity" />
+        <activity android:name="br.com.joaopaulosj.vanhackathon2019.ui.common.ExpandedPictureActivity" />
+        <activity android:name="br.com.joaopaulosj.vanhackathon2019.ui.common.WebViewActivity" />
+        <activity android:name="br.com.joaopaulosj.vanhackathon2019.ui.simplelist.SimpleListActivity" />
         <activity android:name=".ui.loadingactivity.LoadingActivity" />
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name="br.com.joaopaulosj.vanhackathon2019.ui.login.LoginActivity"
             android:exported="true" />
         <activity android:name=".ui.forgotpassword.ForgotPasswordActivity"/>
         <activity android:name=".ui.gallery.GalleryActivity"/>
