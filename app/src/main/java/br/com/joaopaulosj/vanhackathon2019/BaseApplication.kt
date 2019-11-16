@@ -3,8 +3,8 @@ package br.com.joaopaulosj.vanhackathon2019
 import android.app.Application
 import br.com.joaopaulosj.vanhackathon2019.data.local.PreferencesHelper
 import br.com.joaopaulosj.vanhackathon2019.data.remote.UserUnauthorizedBus
-import com.crashlytics.android.Crashlytics
-import io.fabric.sdk.android.Fabric
+//import com.crashlytics.android.Crashlytics
+//import io.fabric.sdk.android.Fabric
 import io.reactivex.observers.DisposableObserver
 
 class BaseApplication : Application() {
@@ -12,7 +12,7 @@ class BaseApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        setFabric()
+//        setFabric()
 
         setPreferencesHelper()
 
@@ -23,11 +23,11 @@ class BaseApplication : Application() {
         PreferencesHelper.init(applicationContext)
     }
 
-    private fun setFabric() {
-        if (BuildConfig.REPORT_CRASH) {
-            Fabric.with(this, Crashlytics())
-        }
-    }
+//    private fun setFabric() {
+//        if (BuildConfig.REPORT_CRASH) {
+//            Fabric.with(this, Crashlytics())
+//        }
+//    }
 
     private fun setBus() {
         UserUnauthorizedBus.getEvents().subscribeWith(object : DisposableObserver<Any>() {

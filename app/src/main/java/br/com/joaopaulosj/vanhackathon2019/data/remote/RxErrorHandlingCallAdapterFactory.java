@@ -1,6 +1,6 @@
 package br.com.joaopaulosj.vanhackathon2019.data.remote;
 
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 import com.google.gson.JsonParseException;
 
 import java.io.IOException;
@@ -73,7 +73,7 @@ public class RxErrorHandlingCallAdapterFactory extends CallAdapter.Factory {
                 switch (((HttpException) throwable).code()) {
                     case NetworkConstants.CODE_UNKNOWN:
                         if (!BuildConfig.DEBUG)
-                            Crashlytics.logException(new Throwable(((HttpException) throwable).response().raw().request().url().toString() + " - " + ((HttpException) throwable).message()));
+//                            Crashlytics.logException(new Throwable(((HttpException) throwable).response().raw().request().url().toString() + " - " + ((HttpException) throwable).message()));
                         break;
                 }
                 HttpException httpException = (HttpException) throwable;
@@ -98,7 +98,7 @@ public class RxErrorHandlingCallAdapterFactory extends CallAdapter.Factory {
                 throwable = new IOException(BuildConfig.DEBUG ?
                         ERROR_PARSE_DEBUG + " " + throwable.getMessage() :
                         ERROR_PARSE_PRODUCTION);
-                if (!BuildConfig.DEBUG) Crashlytics.logException(throwable);
+//                if (!BuildConfig.DEBUG) Crashlytics.logException(throwable);
                 return RetrofitException.unexpectedError(throwable);
             }
 

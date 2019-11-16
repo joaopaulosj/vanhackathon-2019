@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'io.fabric'
+//apply plugin: 'io.fabric'
 
 repositories {
     maven {
@@ -8,18 +8,18 @@ repositories {
         name 'Google'
     }
     mavenCentral()
-    maven { url 'https://maven.fabric.io/public' }
+//    maven { url 'https://maven.fabric.io/public' }
 }
 
 buildscript {
     repositories {
         jcenter()
         google()
-        maven { url 'https://maven.fabric.io/public' }
+//        maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$rootProject.kotlinVersion"
-        classpath 'io.fabric.tools:gradle:1.+'
+//        classpath 'io.fabric.tools:gradle:1.+'
         classpath 'com.android.tools.build:gradle:3.5.2'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -70,7 +70,6 @@ android {
             manifestPlaceholders = [appName: APP_NAME]
             signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            ext.betaDistributionGroupAliases = "mobile-testers"
         }
         debug {
             debuggable true
@@ -110,9 +109,9 @@ dependencies {
     //FIREBASE
     implementation "com.google.firebase:firebase-messaging:$playServicesVersion"
     //FABRIC
-    implementation('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
-        transitive = true
-    }
+//    implementation('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
+//        transitive = true
+//    }
 
 //    //VIEW PAGER INDICATOR
 //    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1@aar'
