@@ -60,10 +60,17 @@
 	<string name="forgot_password_confirm_email">Confirmar E-mail</string>
 	<string name="forgot_password_send">Enviar</string>
 	
-	<!--GALLERY-->
-	<string name="gallery_add">Adicionar</string>
-	<string name="gallery_title">Galeria</string>
-	<string name="gallery_placeholder">VISITANTE, AQUI VOCÊ PODE TIRAR FOTOS E VÍDEOS DAS NOVIDADES DA LUBGRAX PARA SE LEMBRAR MAIS TARDE.</string>
-	<string name="pictures_remove_confirmation">Deseja deletar esta foto?</string>
+	<!--	HOME-->
+	<string name="drawer_premium_button">Become Premium!</string>
+	<string name="drawer_english_button">English Verification</string>
+	<string name="drawer_code_button">Code Verification</string>
+	<string name="drawer_referral_button">Referral Program</string>
+	<string name="drawer_subscription_button">Subscription</string>
+	<string name="drawer_settings_button">Settings</string>
+	<string name="drawer_courses_button">Courses</string>
+	<string name="drawer_library_button">Library</string>
+	<string name="drawer_slack_button">Slack</string>
+	<string name="drawer_logout_button">Sign out</string>
+	
 
 </resources>

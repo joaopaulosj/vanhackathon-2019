@@ -4,6 +4,8 @@
 	android:layout_height="match_parent"
 	android:orientation="vertical">
 	
+	<include layout="@layout/partial_toolbar" />
+	
 	<TextView
 		android:layout_gravity="center"
 		android:layout_width="wrap_content"

@@ -7,6 +7,7 @@ object Constants {
     const val GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=$PACKAGE_NAME"
     const val CONTACT_EMAIL = "atendimento@mobile2you.com.br"
     const val EASTER_EGG_URL = "http://www.mobile2you.com.br/wp-content/themes/twentyfifteen/images/team.png"
+    const val PROFILE_IMG_URL = "https://vanhack.com/platform/MvcUser/getInstancePhoto?entityId=178334"
 
 
     //GENERAL

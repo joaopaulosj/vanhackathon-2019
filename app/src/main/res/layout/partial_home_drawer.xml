@@ -1,177 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="wrap_content"
 	android:layout_height="match_parent"
-	android:layout_marginEnd="64dp"
 	android:background="@color/colorPrimary"
 	android:orientation="vertical">
 	
-	<RelativeLayout
+	<!--	<ImageView-->
+	<!--		android:layout_width="54dp"-->
+	<!--		android:layout_height="54dp"-->
+	<!--		android:layout_gravity="center"-->
+	<!--		android:layout_marginTop="16dp"-->
+	<!--		android:src="@drawable/logo_white" />-->
+	
+	<androidx.constraintlayout.widget.ConstraintLayout
 		android:id="@+id/homeDrawerCloseBtn"
-		android:layout_width="@dimen/drawer_item_size"
-		android:layout_height="64dp"
-		android:background="?android:selectableItemBackground"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
 		android:clickable="true"
-		android:focusable="true">
+		android:focusable="true"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
 		
 		<ImageView
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:layout_centerInParent="true"
-			android:background="@color/colorPrimaryDark"
-			android:padding="16dp"
-			android:tint="@color/color_white"
-			app:srcCompat="@drawable/ic_close" />
-	
-	</RelativeLayout>
-	
-	<ScrollView
-		android:layout_width="wrap_content"
-		android:layout_height="match_parent"
-		android:scrollbars="none">
+			android:layout_width="56dp"
+			android:layout_height="56dp"
+			android:scaleType="fitXY"
+			app:layout_constraintBottom_toBottomOf="@id/toolbar_profile_iv"
+			app:layout_constraintEnd_toEndOf="@id/toolbar_profile_iv"
+			app:layout_constraintStart_toStartOf="@id/toolbar_profile_iv"
+			app:layout_constraintTop_toTopOf="@id/toolbar_profile_iv"
+			app:srcCompat="@drawable/ic_round" />
 		
-		<LinearLayout
+		<ImageView
+			android:id="@+id/toolbar_profile_iv"
+			android:layout_width="44dp"
+			android:layout_height="44dp"
+			android:layout_margin="16dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:src="@drawable/placeholder_user" />
+		
+		<TextView
+			android:id="@+id/profile_toolbar_name_tv"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:orientation="vertical">
-			
-			<RelativeLayout
-				android:id="@+id/homeDrawerProfileBtn"
-				android:layout_width="@dimen/drawer_item_size"
-				android:layout_height="wrap_content"
-				android:background="?android:selectableItemBackground"
-				android:clickable="true"
-				android:focusable="true">
-				
-				<ImageView
-					android:id="@+id/homeDrawerProfileImg"
-					android:layout_width="match_parent"
-					android:layout_height="80dp"
-					android:layout_centerInParent="true"
-					android:background="@color/colorPrimary"
-					android:padding="@dimen/vertical_margin"
-					app:srcCompat="@drawable/ic_add" />
-			
-			</RelativeLayout>
-			
-			<RelativeLayout
-				android:id="@+id/homeDrawerCalendarBtn"
-				android:layout_width="@dimen/drawer_item_size"
-				android:layout_height="wrap_content"
-				android:background="?android:selectableItemBackground"
-				android:clickable="true"
-				android:focusable="true"
-				android:paddingTop="@dimen/vertical_margin"
-				android:paddingBottom="@dimen/vertical_margin">
-				
-				<ImageView
-					android:id="@+id/imgCalendar"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_alignParentTop="true"
-					app:srcCompat="@drawable/ic_add" />
-				
-				<TextView
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_below="@id/imgCalendar"
-					android:layout_marginTop="@dimen/vertical_margin_small"
-					android:gravity="center"
-					android:text="Teste"
-					android:textColor="@color/color_white"
-					android:textSize="12sp" />
-			</RelativeLayout>
-			
-			<RelativeLayout
-				android:id="@+id/homeDrawerAnnouncementsBtn"
-				android:layout_width="@dimen/drawer_item_size"
-				android:layout_height="wrap_content"
-				android:background="?android:selectableItemBackground"
-				android:clickable="true"
-				android:focusable="true"
-				android:paddingTop="@dimen/vertical_margin"
-				android:paddingBottom="@dimen/vertical_margin">
-				
-				<ImageView
-					android:id="@+id/imgNotifications"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_alignParentTop="true"
-					app:srcCompat="@drawable/ic_add" />
-				
-				<TextView
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_below="@id/imgNotifications"
-					android:layout_marginTop="@dimen/vertical_margin_small"
-					android:gravity="center"
-					android:text="teste"
-					android:textColor="@color/color_white"
-					android:textSize="12sp" />
-			</RelativeLayout>
-			
-			<RelativeLayout
-				android:id="@+id/homeDrawerMinutesBtn"
-				android:layout_width="@dimen/drawer_item_size"
-				android:layout_height="wrap_content"
-				android:background="?android:selectableItemBackground"
-				android:clickable="true"
-				android:focusable="true"
-				android:paddingTop="@dimen/vertical_margin"
-				android:paddingBottom="@dimen/vertical_margin"
-				android:visibility="visible">
-				
-				<ImageView
-					android:id="@+id/imgMinutes"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_alignParentTop="true"
-					app:srcCompat="@drawable/ic_add" />
-				
-				<TextView
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_below="@id/imgMinutes"
-					android:layout_marginTop="@dimen/vertical_margin_small"
-					android:gravity="center"
-					android:text="Teste"
-					android:textColor="@color/color_white"
-					android:textSize="12sp" />
-			</RelativeLayout>
-			
-			<RelativeLayout
-				android:id="@+id/homeDrawerGuidelineBtn"
-				android:layout_width="@dimen/drawer_item_size"
-				android:layout_height="wrap_content"
-				android:background="?android:selectableItemBackground"
-				android:clickable="true"
-				android:focusable="true"
-				android:paddingTop="@dimen/vertical_margin"
-				android:paddingBottom="@dimen/vertical_margin"
-				android:visibility="visible">
-				
-				<ImageView
-					android:id="@+id/imgGuideline"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_alignParentTop="true"
-					app:srcCompat="@drawable/ic_add" />
-				
-				<TextView
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_below="@id/imgGuideline"
-					android:layout_marginTop="@dimen/vertical_margin_small"
-					android:gravity="center"
-					android:text="Teste"
-					android:textColor="@color/color_white"
-					android:textSize="12sp" />
-			</RelativeLayout>
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="32dp"
+			android:text="João Paulo Januário"
+			android:textColor="@color/color_white"
+			android:textSize="@dimen/text_body"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toEndOf="@id/toolbar_profile_iv"
+			app:layout_constraintTop_toTopOf="@id/toolbar_profile_iv" />
 		
-		</LinearLayout>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="32dp"
+			android:alpha="0.7"
+			android:text="jpsjanuario@gmail.com"
+			android:textColor="@color/color_white"
+			android:textSize="@dimen/text_body"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="@id/profile_toolbar_name_tv"
+			app:layout_constraintTop_toBottomOf="@id/profile_toolbar_name_tv" />
+		
+		<View
+			style="@style/Divider"
+			android:layout_width="0dp"
+			android:layout_marginTop="16dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/toolbar_profile_iv" />
 	
-	</ScrollView>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+	
+	<FrameLayout
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:scrollbars="none"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="@id/homeDrawerCloseBtn"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/homeDrawerCloseBtn">
+		
+		<ImageView
+			android:layout_width="400dp"
+			android:layout_height="400dp"
+			android:layout_gravity="center"
+			android:alpha="0.05"
+			android:src="@drawable/logo_white" />
+		
+		<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+				
+				<TextView
+					android:id="@+id/homeDrawerPremiumBtn"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="?selectableItemBackground"
+					android:paddingStart="16dp"
+					android:paddingTop="48dp"
+					android:paddingBottom="@dimen/drawer_item_padding"
+					android:text="@string/drawer_premium_button"
+					android:textColor="@color/colorWarningLight"
+					android:textSize="@dimen/drawer_item_font_size" />
+				
+				<TextView
+					android:id="@+id/homeDrawerEnglishBtn"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="?selectableItemBackground"
+					android:paddingStart="16dp"
+					android:paddingTop="@dimen/drawer_item_padding"
+					android:paddingBottom="@dimen/drawer_item_padding"
+					android:text="@string/drawer_english_button"
+					android:textColor="@color/color_white"
+					android:textSize="@dimen/drawer_item_font_size" />
+				
+				<TextView
+					android:id="@+id/homeDrawerCodeBtn"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="?selectableItemBackground"
+					android:paddingStart="16dp"
+					android:paddingTop="@dimen/drawer_item_padding"
+					android:paddingBottom="@dimen/drawer_item_padding"
+					android:text="@string/drawer_code_button"
+					android:textColor="@color/color_white"
+					android:textSize="@dimen/drawer_item_font_size" />
+				
+				<TextView
+					android:id="@+id/homeDrawerReferralBtn"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="?selectableItemBackground"
+					android:paddingStart="16dp"
+					android:paddingTop="@dimen/drawer_item_padding"
+					android:paddingBottom="@dimen/drawer_item_padding"
+					android:text="@string/drawer_referral_button"
+					android:textColor="@color/color_white"
+					android:textSize="@dimen/drawer_item_font_size" />
+				
+				<TextView
+					android:id="@+id/homeDrawerCoursesBtn"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="?selectableItemBackground"
+					android:paddingStart="16dp"
+					android:paddingTop="@dimen/drawer_item_padding"
+					android:paddingBottom="@dimen/drawer_item_padding"
+					android:text="@string/drawer_courses_button"
+					android:textColor="@color/color_white"
+					android:textSize="@dimen/drawer_item_font_size" />
+				
+				<TextView
+					android:id="@+id/homeDrawerLibraryBtn"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="?selectableItemBackground"
+					android:paddingStart="16dp"
+					android:paddingTop="@dimen/drawer_item_padding"
+					android:paddingBottom="@dimen/drawer_item_padding"
+					android:text="@string/drawer_library_button"
+					android:textColor="@color/color_white"
+					android:textSize="@dimen/drawer_item_font_size" />
+				
+				<TextView
+					android:id="@+id/homeDrawerSubscriptionBtn"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="?selectableItemBackground"
+					android:paddingStart="16dp"
+					android:paddingTop="@dimen/drawer_item_padding"
+					android:paddingBottom="@dimen/drawer_item_padding"
+					android:text="@string/drawer_subscription_button"
+					android:textColor="@color/color_white"
+					android:textSize="@dimen/drawer_item_font_size" />
+				
+				<TextView
+					android:id="@+id/homeDrawerSlackBtn"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="?selectableItemBackground"
+					android:paddingStart="16dp"
+					android:paddingTop="@dimen/drawer_item_padding"
+					android:paddingBottom="@dimen/drawer_item_padding"
+					android:text="@string/drawer_slack_button"
+					android:textColor="@color/color_white"
+					android:textSize="@dimen/drawer_item_font_size" />
+				
+				<TextView
+					android:id="@+id/homeDrawerLogoutBtn"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="24dp"
+					android:background="?selectableItemBackground"
+					android:paddingStart="16dp"
+					android:paddingTop="@dimen/drawer_item_padding"
+					android:paddingBottom="@dimen/drawer_item_padding"
+					android:text="@string/drawer_logout_button"
+					android:textColor="@color/color_gray_light"
+					android:textSize="@dimen/drawer_item_font_size" />
+			
+			</LinearLayout>
+		
+		</ScrollView>
+	
+	</FrameLayout>
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

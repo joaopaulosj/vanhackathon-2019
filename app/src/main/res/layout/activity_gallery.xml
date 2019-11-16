@@ -11,7 +11,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_margin="@dimen/vertical_margin"
-        android:text="@string/gallery_placeholder"/>
+        android:text="galeria"/>
 
     <LinearLayout
         android:layout_width="match_parent"

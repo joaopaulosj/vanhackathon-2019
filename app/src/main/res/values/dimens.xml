@@ -31,6 +31,7 @@
 	
 	<!--HOME-->
 	<dimen name="drawer_item_size">150dp</dimen>
-	<dimen name="drawer_item_padding">28dp</dimen>
+	<dimen name="drawer_item_padding">24dp</dimen>
+	<dimen name="drawer_item_font_size">@dimen/text_subheading</dimen>
 
 </resources>
