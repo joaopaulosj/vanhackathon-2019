@@ -1,0 +1,123 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$rootProject.kotlinVersion"
+        classpath 'io.fabric.tools:gradle:1.+'
+        classpath 'com.android.tools.build:gradle:3.5.2'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+// Create a variable called keystorePropertiesFile, and initialize it to your
+// keystore.properties file, in the rootProject folder.
+def keystorePropertiesFile = rootProject.file("app/keystore/keystore.properties")
+
+// Initialize a new Properties() object called keystoreProperties.
+def keystoreProperties = new Properties()
+
+// Load your keystore.properties file into the keystoreProperties object.
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    ext {
+        APP_NAME = "@string/app_name_default"
+        APP_NAME_DEBUG = "@string/app_name_debug"
+    }
+
+    defaultConfig {
+        applicationId "com.joaopaulosj.vanhackhathon2019"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1000
+        // Major -> Millions, Minor -> Thousands, Bugfix -> Hundreds. E.g 1.3.72 == 1,003,072
+        versionName "0.1.0"
+        vectorDrawables.useSupportLibrary true
+    }
+
+    signingConfigs {
+        config {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            buildConfigField "boolean", "REPORT_CRASH", "true"
+            manifestPlaceholders = [appName: APP_NAME]
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ext.betaDistributionGroupAliases = "mobile-testers"
+        }
+        debug {
+            debuggable true
+            applicationIdSuffix ".debug"
+            versionNameSuffix '-DEBUG'
+            buildConfigField "boolean", "REPORT_CRASH", "false"
+            manifestPlaceholders = [appName: APP_NAME_DEBUG]
+        }
+    }
+    buildToolsVersion rootProject.ext.buildToolsVersion
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //SUPPORT
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation "androidx.recyclerview:recyclerview:1.0.0"
+    implementation "com.google.android.material:material:1.0.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //TESTS
+    testImplementation 'junit:junit:4.12'
+    //RETROFIT
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    //KOTLIN
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    implementation "org.jetbrains.anko:anko:$ankoVersion"
+    implementation "androidx.core:core-ktx:$ktxVersion"
+    //RX
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+    //GLIDE
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    //FIREBASE
+    implementation "com.google.firebase:firebase-messaging:$playServicesVersion"
+    //FABRIC
+    implementation('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
+        transitive = true
+    }
+
+//    //VIEW PAGER INDICATOR
+//    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1@aar'
+//    //MULTIDEX
+//    implementation 'com.android.support:multidex:1.0.3'
+}
+
+apply plugin: 'kotlin-android-extensions'

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.mobile2you.m2ybase">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${appName}"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- FIREBASE MESSAGING -->
+        <service android:name=".data.remote.firebase.FbInstaceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".data.remote.firebase.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- TODO CHANGE ICON TO A NOTIFICATION ICON ACCORDING TO SPECIFICATIONS -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+
+        <!-- FILE PROVIDER -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/files_paths" />
+        </provider>
+
+        <!-- FABRIC -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d9aa34977d8b9166187cc83674aea00089585509" />
+
+        <!-- ACTIVITIES -->
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.common.ExpandedPictureActivity" />
+        <activity android:name=".ui.common.WebViewActivity" />
+        <activity android:name=".ui.simplelist.SimpleListActivity" />
+        <activity android:name=".ui.loadingactivity.LoadingActivity" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="true" />
+        <activity android:name=".ui.forgotpassword.ForgotPasswordActivity"/>
+        <activity android:name=".ui.gallery.GalleryActivity"/>
+    </application>
+
+</manifest>
