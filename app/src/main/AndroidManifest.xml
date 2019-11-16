@@ -62,12 +62,9 @@
         <activity android:name="br.com.joaopaulosj.vanhackathon2019.ui.common.ExpandedPictureActivity" />
         <activity android:name="br.com.joaopaulosj.vanhackathon2019.ui.common.WebViewActivity" />
         <activity android:name="br.com.joaopaulosj.vanhackathon2019.ui.simplelist.SimpleListActivity" />
-        <activity android:name=".ui.loadingactivity.LoadingActivity" />
         <activity
             android:name="br.com.joaopaulosj.vanhackathon2019.ui.login.LoginActivity"
             android:exported="true" />
-        <activity android:name=".ui.forgotpassword.ForgotPasswordActivity"/>
-        <activity android:name=".ui.gallery.GalleryActivity"/>
     </application>
 
 </manifest>
