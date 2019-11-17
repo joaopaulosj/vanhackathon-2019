@@ -15,10 +15,10 @@ class ProfileFragment : Fragment() {
 	                          savedInstanceState: Bundle?): View? {
 		val view = inflater.inflate(R.layout.fragment_profile, container, false)
 		
-		view.webview.apply {
-			settings.javaScriptEnabled = true
-			loadUrl("https://vanhack.com/platform/profile")
-		}
+//		view.webview.apply {
+//			settings.javaScriptEnabled = true
+//			loadUrl("https://vanhack.com/platform/profile")
+//		}
 		
 		return view
 	}

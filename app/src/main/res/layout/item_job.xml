@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	
+	<androidx.cardview.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/horizontal_margin"
+		android:layout_marginTop="@dimen/vertical_margin_detail"
+		android:layout_marginEnd="@dimen/horizontal_margin"
+		android:layout_marginBottom="@dimen/vertical_margin_detail"
+		app:cardCornerRadius="4dp"
+		app:cardElevation="4dp">
+		
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			
+			<TextView
+				android:id="@+id/jobTitleTv"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/horizontal_margin"
+				android:layout_marginTop="@dimen/vertical_margin"
+				android:layout_marginEnd="@dimen/horizontal_margin"
+				android:textSize="@dimen/text_title"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toStartOf="@id/jobStartIv"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				tools:text="Senior Front End Engineer" />
+			
+			<ImageView
+				android:id="@+id/jobStartIv"
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_margin="@dimen/vertical_margin"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:srcCompat="@drawable/ic_star_empty" />
+			
+			<ImageView
+				android:id="@+id/jobFlagIv"
+				android:layout_width="30dp"
+				android:layout_height="15dp"
+				android:layout_marginStart="@dimen/horizontal_margin"
+				android:layout_marginTop="@dimen/vertical_margin_detail"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/jobTitleTv"
+				tools:src="@drawable/placeholder_photo" />
+			
+			<TextView
+				android:id="@+id/jobCityTv"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/horizontal_margin_detail"
+				android:layout_marginEnd="@dimen/horizontal_margin"
+				android:textSize="@dimen/text_body"
+				app:layout_constraintBottom_toBottomOf="@id/jobFlagIv"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@id/jobFlagIv"
+				app:layout_constraintTop_toTopOf="@id/jobFlagIv"
+				tools:text="Vancouver" />
+			
+			<TextView
+				android:id="@+id/jobDescriptionTv"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/horizontal_margin"
+				android:layout_marginTop="@dimen/vertical_margin"
+				android:layout_marginEnd="@dimen/horizontal_margin"
+				android:ellipsize="end"
+				android:maxLines="4"
+				android:textColor="@color/color_gray_default"
+				android:textSize="@dimen/text_body"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/jobCityTv"
+				tools:text="@tools:sample/lorem/random" />
+			
+			<View
+				android:id="@+id/jobSkillsRv"
+				android:layout_width="match_parent"
+				android:layout_height="30dp"
+				android:background="@color/color_gray_default"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				android:layout_marginTop="@dimen/vertical_margin"
+				app:layout_constraintTop_toBottomOf="@id/jobDescriptionTv" />
+			
+			<br.com.joaopaulosj.vanhackathon2019.ui.widget.ProgressButton
+				android:id="@+id/jobApplyBtn"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				app:btnBackground="@color/colorPrimary"
+				app:btnText="@string/job_apply_btn"
+				app:btnTextColor="@color/color_white"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/jobSkillsRv" />
+		
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	
+	</androidx.cardview.widget.CardView>
+
+</FrameLayout>

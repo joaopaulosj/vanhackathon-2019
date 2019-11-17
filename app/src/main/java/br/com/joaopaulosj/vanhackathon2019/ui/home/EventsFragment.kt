@@ -15,10 +15,10 @@ class EventsFragment : Fragment() {
 	                          savedInstanceState: Bundle?): View? {
 		val view = inflater.inflate(R.layout.fragment_events, container, false)
 		
-		view.webview.apply {
-			settings.javaScriptEnabled = true
-			loadUrl("https://vanhack.com/platform/#/events")
-		}
+//		view.webview.apply {
+//			settings.javaScriptEnabled = true
+//			loadUrl("https://vanhack.com/platform/#/events")
+//		}
 		
 		return view
 	}

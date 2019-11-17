@@ -15,10 +15,10 @@ class PipelineFragment : Fragment() {
 	                          savedInstanceState: Bundle?): View? {
 		val view = inflater.inflate(R.layout.fragment_pipeline, container, false)
 		
-		view.webview.apply {
-			settings.javaScriptEnabled = true
-			loadUrl("https://vanhack.com/platform/#/jobs-pipeline")
-		}
+//		view.webview.apply {
+//			settings.javaScriptEnabled = true
+//			loadUrl("https://vanhack.com/platform/#/jobs-pipeline")
+//		}
 		
 		return view
 	}
