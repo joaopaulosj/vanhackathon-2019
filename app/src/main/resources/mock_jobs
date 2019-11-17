@@ -1,6 +1,551 @@
 {
   "jobs": [
     {
+      "positionName": "Senior Front End Engineer",
+      "description": "Awesome company in Toronto is hiring for senior front-end engineers! \n \n More details to come shortly.",
+      "descriptionHtml": "<p>Awesome company in Toronto is hiring for senior front-end engineers!</p>\n<p><br></p>\n<p>More details to come shortly.&nbsp;</p>",
+      "company": null,
+      "city": "Toronto",
+      "country": "Canada",
+      "postDate": "2019-11-14T17:26:37.62",
+      "mustHaveSkills": [
+        {
+          "id": 0,
+          "name": "javascript",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "html",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "css",
+          "match": false
+        }
+      ],
+      "niceToHaveSkills": [
+        {
+          "id": 0,
+          "name": "react.js",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "angular",
+          "match": false
+        }
+      ],
+      "jobType": "0",
+      "salaryRangeStart": null,
+      "salaryRangeEnd": null,
+      "applied": false,
+      "favorited": false,
+      "newJob": true,
+      "matchPorcentage": 0.0,
+      "currency": "",
+      "id": 3020
+    },
+    {
+      "positionName": "Back End Engineer",
+      "description": "Awesome company in Toronto looking for senior back-end engineers! \n \n More details to come shortly.",
+      "descriptionHtml": "<p>Awesome company in Toronto looking for senior back-end engineers!</p>\n<p><br></p>\n<p>More details to come shortly.&nbsp;</p>",
+      "company": null,
+      "city": "Toronto",
+      "country": "Canada",
+      "postDate": "2019-11-14T17:01:41.46",
+      "mustHaveSkills": [
+        {
+          "id": 0,
+          "name": "python",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "aws",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "ruby on rails",
+          "match": false
+        }
+      ],
+      "niceToHaveSkills": [
+        {
+          "id": 0,
+          "name": "agile",
+          "match": true
+        }
+      ],
+      "jobType": "0",
+      "salaryRangeStart": null,
+      "salaryRangeEnd": null,
+      "applied": false,
+      "favorited": false,
+      "newJob": true,
+      "matchPorcentage": 25.0,
+      "currency": "",
+      "id": 3019
+    },
+    {
+      "positionName": "Backend NodeJS Developer",
+      "description": "A global event travel tech company with offices in New York and Vancouver is hiring a Backend NodeJS Developer to help launch their new product.",
+      "descriptionHtml": "<p>A global event travel tech company with offices in New York and Vancouver is hiring a Backend NodeJS Developer to help launch their new product.</p>",
+      "company": null,
+      "city": "Vancouver",
+      "country": "Canada",
+      "postDate": "2019-11-13T22:22:56.313",
+      "mustHaveSkills": [
+        {
+          "id": 0,
+          "name": "node.js",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "javascript",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "typescript",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "http",
+          "match": true
+        },
+        {
+          "id": 0,
+          "name": "rest api",
+          "match": true
+        }
+      ],
+      "niceToHaveSkills": [
+        {
+          "id": 0,
+          "name": "angular",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "react.js",
+          "match": false
+        }
+      ],
+      "jobType": "0",
+      "salaryRangeStart": 80,
+      "salaryRangeEnd": 100,
+      "applied": false,
+      "favorited": false,
+      "newJob": true,
+      "matchPorcentage": 28.0,
+      "currency": "CAD",
+      "id": 3018
+    },
+    {
+      "positionName": "Sr Software Engineer (Web App Developer)",
+      "description": "Great startup located in the Quebec Province is hiring a Sr Fullstack Engineer to join their team! \n Requirements: \n \n  - 4+ y of software development experience  \n  - Solid Fullstack Javascript experience (Node &amp; React)  \n  - Databases: MongoDB and other relational databases  \n  - Experience with Database optimization  \n  - Experience building and scaling RestAPIs  \n  - Hands-on experience in delivering secure applications  \n  - Agile (SCRUM) practitioner  \n  - You have built Single Page Applications  \n \n Bonus: \n - Mobile development \n - AWS (big plus) \n \n Why us? \n - Benefit package \n - Great office with informal dress code (plus happy hour with teammates) \n - Flexible hours \n \n  Candidates with verified English as \"Advanced\" or \"Fluent\" will be considered  \n \n \n Not a good fit for you? \n  If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! And if your recommendation is hired, you'll receive $150CAD from VanHack!!  \n  Use this link to get your referral personal link:   https://app.vanhack.com/New/#/referral",
+      "descriptionHtml": "<p>Great startup located in the Quebec Province is hiring a Sr Fullstack Engineer to join their team!</p>\n<p>Requirements:</p>\n<p><br></p>\n<p><em>- 4+ y of software development experience</em></p>\n<p><em>- Solid Fullstack Javascript experience (Node &amp; React)</em></p>\n<p><em>- Databases: MongoDB and other relational databases</em></p>\n<p><em>- Experience with Database optimization</em></p>\n<p><em>- Experience building and scaling RestAPIs</em></p>\n<p><em>- Hands-on experience in delivering secure applications</em></p>\n<p><em>- Agile (SCRUM) practitioner</em></p>\n<p><em>- You have built Single Page Applications</em></p>\n<p><br></p>\n<p>Bonus:</p>\n<p>- Mobile development</p>\n<p>- AWS (big plus)</p>\n<p><br></p>\n<p>Why us?</p>\n<p>- Benefit package</p>\n<p>- Great office with informal dress code (plus happy hour with teammates)</p>\n<p>- Flexible hours</p>\n<p><br></p>\n<p><em>Candidates with verified English as \"Advanced\" or \"Fluent\" will be considered</em></p>\n<p><br></p>\n<p><br></p>\n<p><em><strong>Not a good fit for you?</strong></em></p>\n<p><em>If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! And if your recommendation is hired, you'll receive $150CAD from VanHack!!</em></p>\n<p><em>Use this link to get your referral personal link:</em><a href=\"https://meet.google.com/linkredirect?authuser=4&amp;dest=https%3A%2F%2Fapp.vanhack.com%2FNew%2F%23%2Freferral\"> <u><em>https://app.vanhack.com/New/#/referral</em></u></a></p>",
+      "company": null,
+      "city": "Gatineau",
+      "country": "Canada",
+      "postDate": "2019-11-13T00:14:41.6",
+      "mustHaveSkills": [
+        {
+          "id": 0,
+          "name": "node.js",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "mongodb",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "javascript",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "api",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "webdev",
+          "match": false
+        }
+      ],
+      "niceToHaveSkills": [
+        {
+          "id": 0,
+          "name": "typescript",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "single-­page applications",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "agile",
+          "match": true
+        },
+        {
+          "id": 0,
+          "name": "database tuning",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "aws",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "react.js",
+          "match": false
+        }
+      ],
+      "jobType": "0",
+      "salaryRangeStart": 70,
+      "salaryRangeEnd": 100,
+      "applied": false,
+      "favorited": false,
+      "newJob": true,
+      "matchPorcentage": 9.0,
+      "currency": "CAD",
+      "id": 3017
+    },
+    {
+      "positionName": "Sr Software Engineer",
+      "description": "Company located in Germany is looking for a Sr Software Developer to join its team! \n \n Please apply if you have: \n \n - 5+yrs of professional experience \n - Experience with Java OR NodeJS development \n - Great experience in AWS \n - SQL and NoSQL DB knowledge \n - Docker and Kubernetes experience \n - RestAPI and Microservices \n \n  - Candidates with verified English as \"Advanced\" or \"Fluent\" will be considered  \n  - Candidates with 70% score on our HackerRank test will be considered  \n \n  If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! And if your recommendation is hired, you'll receive $150CAD from VanHack!!  \n  Use this link to get your referral personal link: https://app.vanhack.com/New/#/referral",
+      "descriptionHtml": "<p>Company located in Germany is looking for a Sr Software Developer to join its team!</p>\n<p><br></p>\n<p>Please apply if you have:</p>\n<p><br></p>\n<p>- 5+yrs of professional experience</p>\n<p>- Experience with Java <em><strong>OR</strong></em> NodeJS development</p>\n<p>- Great experience in AWS</p>\n<p>- SQL and NoSQL DB knowledge</p>\n<p>- Docker and Kubernetes experience</p>\n<p>- RestAPI and Microservices</p>\n<p><br></p>\n<p><em>- Candidates with verified English as \"Advanced\" or \"Fluent\" will be considered</em></p>\n<p><em>- Candidates with 70% score on our HackerRank test will be considered</em></p>\n<p><br></p>\n<p><em>If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! And if your recommendation is hired, you'll receive $150CAD from VanHack!!</em></p>\n<p><em>Use this link to get your referral personal link: https://app.vanhack.com/New/#/referral</em></p>",
+      "company": null,
+      "city": "Mannheim",
+      "country": "Germany",
+      "postDate": "2019-11-12T15:41:57.007",
+      "mustHaveSkills": [
+        {
+          "id": 0,
+          "name": "java",
+          "match": true
+        },
+        {
+          "id": 0,
+          "name": "node.js",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "aws",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "docker",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "kubernetes",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "sql",
+          "match": true
+        },
+        {
+          "id": 0,
+          "name": "nosql",
+          "match": true
+        },
+        {
+          "id": 0,
+          "name": "rest api",
+          "match": true
+        }
+      ],
+      "niceToHaveSkills": [
+        {
+          "id": 0,
+          "name": "microservices",
+          "match": false
+        }
+      ],
+      "jobType": "0",
+      "salaryRangeStart": 50,
+      "salaryRangeEnd": 60,
+      "applied": false,
+      "favorited": false,
+      "newJob": true,
+      "matchPorcentage": 44.0,
+      "currency": "EUR",
+      "id": 3016
+    },
+    {
+      "positionName": "Sr Backend Developer (Python)",
+      "description": "Waterloo based startup is hiring a Sr Back End Developer! \n \n Please apply if you have: \n \n - 4+yrs of professional experience \n - Very experienced in Python \n - Great skills in AWS \n - SQL DB knowledge (PostgreSQL and etc) \n - And a passion for learning! \n \n  - Candidates with verified English as \"Advanced\" or \"Fluent\" will be considered  \n  - Candidates with 70% score on our HackerRank test will be considered  \n \n  If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! And if your recommendation is hired, you'll receive $150CAD from VanHack!!  \n  Use this link to get your referral personal link: https://app.vanhack.com/New/#/referral",
+      "descriptionHtml": "<p>Waterloo based startup is hiring a Sr Back End Developer!</p>\n<p><br></p>\n<p>Please apply if you have:</p>\n<p><br></p>\n<p>- 4+yrs of professional experience</p>\n<p>- Very experienced in Python</p>\n<p>- Great skills in AWS</p>\n<p>- SQL DB knowledge (PostgreSQL and etc)</p>\n<p>- And a passion for learning!</p>\n<p><br></p>\n<p><em>- Candidates with verified English as \"Advanced\" or \"Fluent\" will be considered</em></p>\n<p><em>- Candidates with 70% score on our HackerRank test will be considered</em></p>\n<p><br></p>\n<p><em>If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! And if your recommendation is hired, you'll receive $150CAD from VanHack!!</em></p>\n<p><em>Use this link to get your referral personal link: https://app.vanhack.com/New/#/referral</em></p>",
+      "company": null,
+      "city": "Waterloo",
+      "country": "Canada",
+      "postDate": "2019-11-12T14:59:48.1",
+      "mustHaveSkills": [
+        {
+          "id": 0,
+          "name": "python",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "aws",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "postgresql",
+          "match": false
+        }
+      ],
+      "niceToHaveSkills": [
+        {
+          "id": 0,
+          "name": "continuos deployment",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "continuous integration",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "sql",
+          "match": true
+        }
+      ],
+      "jobType": "0",
+      "salaryRangeStart": 0,
+      "salaryRangeEnd": 90,
+      "applied": false,
+      "favorited": false,
+      "newJob": true,
+      "matchPorcentage": 16.0,
+      "currency": "CAD",
+      "id": 3015
+    },
+    {
+      "positionName": "SR Front End Developer",
+      "description": "Great startup company based in Waterloo is hiring a Sr Front End engineer! \n \n Please apply if you have: \n - 4+yrs of professional experience \n - Main stack: Angular 2+, Typescript, HTML, CSS \n - Experience mentoring Jr devs \n \n  - Candidates with verified English as \"Advanced\" or \"Fluent\" will be considered  \n  - Candidates with 70% score on our HackerRank test will be considered  \n \n  If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! And if your recommendation is hired, you'll receive $150CAD from VanHack!!  \n  Use this link to get your referral personal link: https://app.vanhack.com/New/#/referral",
+      "descriptionHtml": "<p>Great startup company based in Waterloo is hiring a Sr Front End engineer!</p>\n<p><br></p>\n<p>Please apply if you have:</p>\n<p>- 4+yrs of professional experience</p>\n<p>- Main stack: Angular 2+, Typescript, HTML, CSS</p>\n<p>- Experience mentoring Jr devs</p>\n<p><br></p>\n<p><em>- Candidates with verified English as \"Advanced\" or \"Fluent\" will be considered</em></p>\n<p><em>- Candidates with 70% score on our HackerRank test will be considered</em></p>\n<p><br></p>\n<p><em>If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! And if your recommendation is hired, you'll receive $150CAD from VanHack!!</em></p>\n<p><em>Use this link to get your referral personal link: https://app.vanhack.com/New/#/referral</em></p>",
+      "company": null,
+      "city": "Waterloo",
+      "country": "Canada",
+      "postDate": "2019-11-12T14:44:46.813",
+      "mustHaveSkills": [
+        {
+          "id": 0,
+          "name": "angular",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "typescript",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "javascript",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "html",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "css",
+          "match": false
+        }
+      ],
+      "niceToHaveSkills": [
+        {
+          "id": 0,
+          "name": "mentoring",
+          "match": false
+        }
+      ],
+      "jobType": "0",
+      "salaryRangeStart": 0,
+      "salaryRangeEnd": 90,
+      "applied": false,
+      "favorited": false,
+      "newJob": true,
+      "matchPorcentage": 0.0,
+      "currency": "CAD",
+      "id": 3014
+    },
+    {
+      "positionName": "Fullstack Java Developer",
+      "description": "Great company in Vancouver working with the internet of things is looking for a SR FullStack Java Developer \n \n  Required Skills : \n \n - Front-end technologies (Angular, React, HTML, etc. ) \n- Back-end Java and related frameworks \n- DB architecture, AWS and DevOps  \n- Native iOS or Android development - Not a must \n- Experience with ML/AI (unsupervised) - Not a must \n  \n  Please make sure that your English is verfied and that you have taken our code verification test.  \n \n  Observation:  If you have a friend who is a good fit for this role and it's a not a VanHacker yet, recommend this person to us. \nIf your recommendation is hired, you'll receive $150 CAD from VanHack! \nUse this link to get your referral personal link:  https://app.vanhack.com/New/#/referral",
+      "descriptionHtml": "<p>Great company in Vancouver working with the internet of things is looking for a SR FullStack Java Developer</p>\n<p><br></p>\n<p><strong>Required Skills</strong>:</p>\n<p><br></p>\n<p>- Front-end technologies (Angular, React, HTML, etc. )<br>\n- Back-end Java and related frameworks<br>\n- DB architecture, AWS and DevOps <br>\n- Native iOS or Android development - Not a must<br>\n- Experience with ML/AI (unsupervised) - Not a must</p>\n<p>&nbsp;</p>\n<p><strong>Please make sure that your English is verfied and that you have taken our code verification test.</strong></p>\n<p><br></p>\n<p><strong>Observation:</strong> If you have a friend who is a good fit for this role and it's a not a VanHacker yet, recommend this person to us.<br>\nIf your recommendation is hired, you'll receive $150 CAD from VanHack!<br>\nUse this link to get your referral personal link: <a href=\"https://app.vanhack.com/New/#/referral\" rel=\"noopener noreferrer\" target=\"_blank\">https://app.vanhack.com/New/#/referral</a>&nbsp;</p>",
+      "company": null,
+      "city": "Vancouver",
+      "country": "Canada",
+      "postDate": "2019-11-08T23:32:10.66",
+      "mustHaveSkills": [
+        {
+          "id": 0,
+          "name": "java",
+          "match": true
+        },
+        {
+          "id": 0,
+          "name": "angular",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "react.js",
+          "match": false
+        }
+      ],
+      "niceToHaveSkills": [
+        {
+          "id": 0,
+          "name": "ios",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "android",
+          "match": true
+        },
+        {
+          "id": 0,
+          "name": "machine learning",
+          "match": false
+        }
+      ],
+      "jobType": "0",
+      "salaryRangeStart": null,
+      "salaryRangeEnd": null,
+      "applied": false,
+      "favorited": false,
+      "newJob": false,
+      "matchPorcentage": 33.0,
+      "currency": "",
+      "id": 3013
+    },
+    {
+      "positionName": "Technical Product Manager",
+      "description": "- 4+ years of experience in Product Management and software development. \n - Exceptional problem-solving capabilities that prioritize across multiple key stakeholders, as well as internal teams. \n - Knowledgeable about the Software as a Service (SaaS) space; interested in learning about what other companies are doing. \n - Solid leadership capabilities and ability to motivate and unify multiple cross-functional teams. \n \n  IMPORTANT  \n \n - Candidates with verified English as \"Advanced\" or \"Fluent\" will be considered. \n \n If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! And if your recommendation is hired, you'll receive $150CAD from VanHack!!! \n \n Use this link to get your referral personal link: https://app.vanhack.com/New/#/referral.",
+      "descriptionHtml": "<p>- 4+ years of experience in Product Management and software development.&nbsp;</p>\n<p>- Exceptional problem-solving capabilities that prioritize across multiple key stakeholders, as well as internal teams.</p>\n<p>- Knowledgeable about the Software as a Service (SaaS) space; interested in learning about what other companies are doing.</p>\n<p>- Solid leadership capabilities and ability to motivate and unify multiple cross-functional teams.&nbsp;</p>\n<p><br></p>\n<p>&nbsp;<strong>IMPORTANT</strong></p>\n<p><br></p>\n<p>- Candidates with verified English as \"Advanced\" or \"Fluent\" will be considered.</p>\n<p><br></p>\n<p>If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! And if your recommendation is hired, you'll receive $150CAD from VanHack!!!&nbsp;</p>\n<p><br></p>\n<p>Use this link to get your referral personal link: https://app.vanhack.com/New/#/referral.&nbsp;</p>\n<p><br></p>",
+      "company": null,
+      "city": "Saskatoon",
+      "country": "Canada",
+      "postDate": "2019-11-08T17:33:42.93",
+      "mustHaveSkills": [
+        {
+          "id": 0,
+          "name": "product management",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "software development",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "saas",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "leadership",
+          "match": true
+        }
+      ],
+      "niceToHaveSkills": [
+        {
+          "id": 0,
+          "name": "agile methodologies",
+          "match": false
+        }
+      ],
+      "jobType": "0",
+      "salaryRangeStart": 90,
+      "salaryRangeEnd": 100,
+      "applied": false,
+      "favorited": false,
+      "newJob": false,
+      "matchPorcentage": 20.0,
+      "currency": "CAD",
+      "id": 3011
+    },
+    {
+      "positionName": "Senior Mobile App Developer",
+      "description": "Must-have-skills  \n - 5+ years of experience in web or mobile development \n - Deep knowledge of with ES6/Typescript \n - Mastery of JavaScript, CSS &amp; HTML5 \n - Experience with Dart and Flutter \n - Experience with web technologies for mobile app development (Ionic, NativeScript) \n \n  Nice-to-have skills  \n - Experience with iOS and/or Android native development (Swift, Kotlin) \n - Knowledge and experience with Angular \n - Wireframing and UX experience \n \n  \n  IMPORTANT  \n - Candidates with verified English as \"Advanced\" or \"Fluent\" will be considered. \n \n If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! And if your recommendation is hired, you'll receive $150CAD from VanHack!!! \n \n Use this link to get your referral personal link: https://app.vanhack.com/New/#/referral.",
+      "descriptionHtml": "<p><strong>Must-have-skills</strong></p>\n<p>- 5+ years of experience in web or mobile development</p>\n<p>- Deep knowledge of with ES6/Typescript</p>\n<p>- Mastery of JavaScript, CSS &amp; HTML5</p>\n<p>- Experience with Dart and Flutter</p>\n<p>- Experience with web technologies for mobile app development (Ionic, NativeScript)</p>\n<p><br></p>\n<p><strong>Nice-to-have skills</strong></p>\n<p>- Experience with iOS and/or Android native development (Swift, Kotlin)</p>\n<p>- Knowledge and experience with Angular</p>\n<p>- Wireframing and UX experience</p>\n<p><br></p>\n<p>&nbsp;</p>\n<p><strong>IMPORTANT</strong>&nbsp;</p>\n<p>- Candidates with verified English as \"Advanced\" or \"Fluent\" will be considered.</p>\n<p><br></p>\n<p>If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! And if your recommendation is hired, you'll receive $150CAD from VanHack!!!&nbsp;</p>\n<p><br></p>\n<p>Use this link to get your referral personal link: https://app.vanhack.com/New/#/referral.&nbsp;</p>",
+      "company": null,
+      "city": "Toronto",
+      "country": "Canada",
+      "postDate": "2019-11-08T02:32:14.66",
+      "mustHaveSkills": [
+        {
+          "id": 0,
+          "name": "javascript",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "dart",
+          "match": true
+        },
+        {
+          "id": 0,
+          "name": "ionic framework",
+          "match": false
+        },
+        {
+          "id": 0,
+          "name": "nativescript",
+          "match": false
+        }
+      ],
+      "niceToHaveSkills": [
+        {
+          "id": 0,
+          "name": "kotlin",
+          "match": true
+        },
+        {
+          "id": 0,
+          "name": "swift",
+          "match": false
+        }
+      ],
+      "jobType": "0",
+      "salaryRangeStart": 90,
+      "salaryRangeEnd": 110,
+      "applied": false,
+      "favorited": false,
+      "newJob": false,
+      "matchPorcentage": 33.0,
+      "currency": "CAD",
+      "id": 3009
+    },
+    {
       "positionName": "VanHack Head of Sales",
       "description": "VanHack is looking for a Head of Sales to build a world class sales organization and impact the lives of thousands of developers from around the world. \n We’re a mid sized tech scale up that has strong product market fit, is profitable, has industry leading customers and the support of great organizations such as Techstars, the DMZ, the Lazaridis Institute and many more. \n \n Our CEO has been the Head of Sales until now and this is a key hire that will be able to bring our sales team to the next level and make a meaningful impact on the future of our company.  \n We’re looking for someone to take a hands on role in the training, hiring, optimizing and scaling our team in order to bring us from 5 to 15-20 sales people in the next 12 months and significantly impact revenue and team success. \n \n This person is someone we can count on to quickly learn our product and processes and come up with suggestions on how to improve things.  \n Someone who can own the entire sales function of the company and work closely with the reps to help them deal with any issues that might arise and coach them on how to close more deals faster. \n \n They’ll also work closely with our Head of Marketing and CEO, plus the rest of the management team, on growth strategy. \n We’re looking for a Head of Sales to act as a mentor and teach / coach the sales team while making sure everyone is following process and doing their job as best as they can. They’ll also be able to provide emotional support when things go wrong and be able to get team members motivated to make things happen. \n \n The impact we’re looking for is as follows:  \n \n Within...  \n \n  1 month:  Understand the VanHack product inside and out and gain the trust of the sales team so you can start managing and improving things as needed. \n  3 months:  You will have hired you first 2 sales reps and have improved upon our current onboarding process to ensure they are successful. You’ll also have closed at least 3 deals of your own since you are still hungry to get your hands dirty and lead by example. \n  6 months:  You’ll have added at least $500,000 of new revenue to the topline from your deals and the deal you’ll have helped new and existing reps close. You’ll also have hired 4 more additional sales reps who will be onboarded and ready to go. Finally, you may have made some changes to the team if necessary. \n  12 months:  You’ll have added at least $1M of new revenue to the topline from the deals the team would not have closed without your guidance. You’ll have trained 10 new reps who are performing well and meeting quota. You’ll be speaking at conferences and seen as a thought leader in the HR Tech space and be a magnet for new business and talent. You’ll be a trusted partner on the VanHack Management team and frequently share your opinion on how we can improve the company as a whole. \n \n The background we think you’ll need to be successful is (but anyone can apply who thinks they’re up for the opportunity): \n \n · 5-10 years of sales experience \n · 3-5 years of sales team management experience \n · Proven ability to hit quota \n · Loves working in a fast-paced environment \n · Experience working in a startup \n · Experience working remotely (or really excited about it) \n · HR experience a plus",
       "descriptionHtml": "<p>&nbsp;&nbsp;</p>\n<p>VanHack is looking for a Head of Sales to build a world class sales organization and impact the lives of thousands of developers from around the world.&nbsp;</p>\n<p>We’re a mid sized tech scale up that has strong product market fit, is profitable, has industry leading customers and the support of great organizations such as Techstars, the DMZ, the Lazaridis Institute and many more.&nbsp;</p>\n<p><br></p>\n<p>Our CEO has been the Head of Sales until now and this is a key hire that will be able to bring our sales team to the next level and make a meaningful impact on the future of our company. &nbsp;</p>\n<p>We’re looking for someone to take a hands on role in the training, hiring, optimizing and scaling our team in order to bring us from 5 to 15-20 sales people in the next 12 months and significantly impact revenue and team success.&nbsp;</p>\n<p><br></p>\n<p>This person is someone we can count on to quickly learn our product and processes and come up with suggestions on how to improve things. &nbsp;&nbsp;</p>\n<p>Someone who can own the entire sales function of the company and work closely with the reps to help them deal with any issues that might arise and coach them on how to close more deals faster.&nbsp;</p>\n<p><br></p>\n<p>They’ll also work closely with our Head of Marketing and CEO, plus the rest of the management team, on growth strategy.</p>\n<p>We’re looking for a Head of Sales to act as a mentor and teach / coach the sales team while making sure everyone is following process and doing their job as best as they can. They’ll also be able to provide emotional support when things go wrong and be able to get team members motivated to make things happen.&nbsp;</p>\n<p><br></p>\n<p>The impact we’re looking for is as follows: &nbsp;</p>\n<p><br></p>\n<p>Within... &nbsp;</p>\n<p><br></p>\n<p><strong>1 month:</strong> Understand the VanHack product inside and out and gain the trust of the sales team so you can start managing and improving things as needed.&nbsp;</p>\n<p><strong>3 months:</strong> You will have hired you first 2 sales reps and have improved upon our current onboarding process to ensure they are successful. You’ll also have closed at least 3 deals of your own since you are still hungry to get your hands dirty and lead by example.&nbsp;</p>\n<p><strong>6 months:</strong> You’ll have added at least $500,000 of new revenue to the topline from your deals and the deal you’ll have helped new and existing reps close. You’ll also have hired 4 more additional sales reps who will be onboarded and ready to go. Finally, you may have made some changes to the team if necessary.</p>\n<p><strong>12 months:</strong> You’ll have added at least $1M of new revenue to the topline from the deals the team would not have closed without your guidance. You’ll have trained 10 new reps who are performing well and meeting quota. You’ll be speaking at conferences and seen as a thought leader in the HR Tech space and be a magnet for new business and talent. You’ll be a trusted partner on the VanHack Management team and frequently share your opinion on how we can improve the company as a whole.&nbsp;</p>\n<p><br></p>\n<p>The background we think you’ll need to be successful is (but anyone can apply who thinks they’re up for the opportunity):&nbsp;</p>\n<p><br></p>\n<p>· 5-10 years of sales experience&nbsp;</p>\n<p>· 3-5 years of sales team management experience&nbsp;</p>\n<p>· Proven ability to hit quota</p>\n<p>· Loves working in a fast-paced environment</p>\n<p>· Experience working in a startup&nbsp;</p>\n<p>· Experience working remotely (or really excited about it)&nbsp;</p>\n<p>· HR experience a plus</p>",
@@ -51,38 +596,6 @@
       "matchPorcentage": 0.0,
       "currency": "",
       "id": 3008
-    },
-    {
-      "positionName": "Lead Ruby on Rails Developer",
-      "description": "Remote job for Ruby on Rails developer at a top HR Tech startup in the Middle East.",
-      "descriptionHtml": "<p>Remote job for Ruby on Rails developer at a top HR Tech startup in the Middle East.</p>",
-      "company": null,
-      "city": "Al Manar",
-      "country": "Yemen",
-      "postDate": "2019-11-07T13:20:15.003",
-      "mustHaveSkills": [
-        {
-          "id": 0,
-          "name": "ruby on rails",
-          "match": false
-        }
-      ],
-      "niceToHaveSkills": [
-        {
-          "id": 0,
-          "name": "javascript",
-          "match": false
-        }
-      ],
-      "jobType": "0",
-      "salaryRangeStart": 40,
-      "salaryRangeEnd": 50,
-      "applied": false,
-      "favorited": false,
-      "newJob": false,
-      "matchPorcentage": 0.0,
-      "currency": "EUR",
-      "id": 3000
     },
     {
       "positionName": "CTO",
