@@ -1,6 +1,8 @@
 package br.com.joaopaulosj.vanhackathon2019.ui.home
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.fragment.app.Fragment
@@ -13,6 +15,7 @@ import kotlinx.android.synthetic.main.partial_home_content.*
 import kotlinx.android.synthetic.main.partial_home_drawer.*
 import kotlinx.android.synthetic.main.partial_toolbar.*
 import org.jetbrains.anko.intentFor
+
 
 class HomeActivity : BaseActivity() {
 	
@@ -37,6 +40,14 @@ class HomeActivity : BaseActivity() {
 		homeDrawerLayout.addDrawerListener(mDrawerToggle)
 		
 		toolbar_profile_iv.loadCircleImage(Constants.PROFILE_IMG_URL)
+		
+		homeDrawerSlackBtn.setOnClickListener { openSlack() }
+	}
+	
+	private fun openSlack() {
+		val uri = Uri.parse(Constants.SLACK_CHANNEL_URI)
+		val intent = Intent(Intent.ACTION_VIEW, uri)
+		startActivity(intent)
 	}
 	
 	private fun setupBottomNavigation() {

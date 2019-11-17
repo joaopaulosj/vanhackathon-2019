@@ -8,6 +8,7 @@ object Constants {
     const val CONTACT_EMAIL = "atendimento@mobile2you.com.br"
     const val EASTER_EGG_URL = "http://www.mobile2you.com.br/wp-content/themes/twentyfifteen/images/team.png"
     const val PROFILE_IMG_URL = "https://vanhack.com/platform/MvcUser/getInstancePhoto?entityId=178334"
+    const val SLACK_CHANNEL_URI = "slack://channel?team=T0CLCJ1AM"
 
 
     //GENERAL
