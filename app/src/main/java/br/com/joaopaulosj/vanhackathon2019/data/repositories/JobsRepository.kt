@@ -13,7 +13,7 @@ object JobsRepository {
 	fun getJobs(): Single<List<JobResponse>> {
 		val mock = Resources.read("mock_jobs")
 		val response = Gson().fromJson<JobsResponse>(mock, JobsResponse::class.java)
-		jobs = response.jobs
+		jobs = response.result
 		return Single.just(jobs)
 	}
 	

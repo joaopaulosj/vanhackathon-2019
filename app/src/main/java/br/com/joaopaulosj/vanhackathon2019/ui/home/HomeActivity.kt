@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import br.com.joaopaulosj.vanhackathon2019.Constants
 import br.com.joaopaulosj.vanhackathon2019.R
 import br.com.joaopaulosj.vanhackathon2019.ui.base.BaseActivity
+import br.com.joaopaulosj.vanhackathon2019.ui.home.events.EventsFragment
 import br.com.joaopaulosj.vanhackathon2019.ui.home.jobs.JobsFragment
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.loadCircleImage
 import kotlinx.android.synthetic.main.activity_home.*

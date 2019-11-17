@@ -1,7 +1,7 @@
 package br.com.joaopaulosj.vanhackathon2019.data.remote.models
 
 class JobsResponse(
-		val jobs: List<JobResponse> = emptyList()
+		val result: List<JobResponse> = emptyList()
 )
 
 class JobResponse(

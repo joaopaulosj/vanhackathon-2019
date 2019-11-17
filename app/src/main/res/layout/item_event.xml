@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	
+	<androidx.cardview.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/horizontal_margin"
+		android:layout_marginTop="@dimen/vertical_margin_small"
+		android:layout_marginEnd="@dimen/horizontal_margin"
+		android:layout_marginBottom="@dimen/vertical_margin_small"
+		app:cardCornerRadius="4dp"
+		app:cardElevation="4dp">
+		
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			
+			<ImageView
+				android:id="@+id/itemEventCoverIv"
+				android:layout_width="match_parent"
+				android:layout_height="128dp"
+				android:scaleType="centerCrop"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				tools:background="@tools:sample/backgrounds/scenic" />
+			
+			<TextView
+				android:id="@+id/itemEventTitleTv"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="@dimen/horizontal_margin_small"
+				android:textSize="@dimen/text_title"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/itemEventCoverIv"
+				tools:text="Leap Vancouver" />
+			
+			<TextView
+				android:id="@+id/itemEventDateTv"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/horizontal_margin_small"
+				android:layout_marginEnd="@dimen/horizontal_margin"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/itemEventTitleTv"
+				tools:text="December 2 - 4" />
+			
+			<ImageView
+				android:id="@+id/itemEventFlagIv"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginEnd="@dimen/horizontal_margin"
+				app:layout_constraintBottom_toBottomOf="@id/itemEventCoverIv"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/itemEventCoverIv"
+				tools:src="@drawable/flag_canada" />
+			
+			<TextView
+				android:id="@+id/itemEventCityTv"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/horizontal_margin_small"
+				android:layout_marginEnd="@dimen/horizontal_margin"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/itemEventDateTv"
+				tools:text="Vancouver - Canada" />
+			
+			<TextView
+				android:id="@+id/itemEventDeadlineTv"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/horizontal_margin_small"
+				android:layout_marginEnd="@dimen/horizontal_margin"
+				android:layout_marginBottom="@dimen/vertical_margin"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/itemEventCityTv"
+				tools:text="Deadline: 11/20/2019" />
+			
+			<TextView
+				android:id="@+id/itemEventButtonTv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/horizontal_margin_small"
+				android:layout_marginEnd="@dimen/horizontal_margin"
+				android:textColor="@color/colorMain"
+				app:layout_constraintBottom_toBottomOf="@id/itemEventDeadlineTv"
+				app:layout_constraintEnd_toEndOf="parent"
+				tools:text="SEE APPLICATION" />
+		
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	
+	</androidx.cardview.widget.CardView>
+
+</FrameLayout>
