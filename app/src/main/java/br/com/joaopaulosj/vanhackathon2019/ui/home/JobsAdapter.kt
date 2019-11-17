@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import br.com.joaopaulosj.vanhackathon2019.R
 import br.com.joaopaulosj.vanhackathon2019.data.remote.models.JobResponse
 import br.com.joaopaulosj.vanhackathon2019.ui.base.SimpleBaseRecyclerViewAdapter
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.dpToPx
@@ -42,6 +44,8 @@ class JobsAdapter(context: Context, private val onItemClickListener: OnItemClick
 	
 	interface OnItemClickListener {
 		fun onItemClicked(item: JobResponse)
+		fun onFavoriteClicked(itemId: Int)
+		fun onApplyClicked(itemId: Int)
 	}
 	
 	inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -50,6 +54,15 @@ class JobsAdapter(context: Context, private val onItemClickListener: OnItemClick
 				setOnClickListener {
 					onItemClickListener.onItemClicked(item)
 				}
+				jobApplyBtn.setLoading(false)
+				if (item.applied) {
+					jobApplyBtn.setText("APPLIED")
+					jobApplyBtn.setBackgroundColor(ContextCompat.getColor(context, R.color.colorSuccess))
+				} else {
+					jobApplyBtn.setText("APPLY")
+					jobApplyBtn.setBackgroundColor(ContextCompat.getColor(context, R.color.colorMain))
+				}
+				
 				jobTitleTv.text = item.positionName.trim()
 				jobDescriptionTv.setHtmlText(item.description)
 				jobDescriptionTv.setOnClickListener {
@@ -60,6 +73,21 @@ class JobsAdapter(context: Context, private val onItemClickListener: OnItemClick
 				}
 				jobCityTv.text = item.city
 				jobFlagIv.loadDrawable(item.getFlagResName())
+				
+				jobStartIv.setOnClickListener {
+					onItemClickListener.onFavoriteClicked(item.id)
+				}
+				
+				jobStartIv.setImageResource(if (item.favorited) {
+					R.drawable.ic_star_filled
+				} else {
+					R.drawable.ic_star_empty
+				})
+				
+				jobApplyBtn.setOnClickListener {
+					jobApplyBtn.setLoading(true)
+					onItemClickListener.onApplyClicked(item.id)
+				}
 				
 				itemView.post {
 					val list = item.getAllSkills()

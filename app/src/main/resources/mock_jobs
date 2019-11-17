@@ -46,7 +46,7 @@
       "salaryRangeStart": null,
       "salaryRangeEnd": null,
       "applied": false,
-      "favorited": false,
+      "favorited": true,
       "newJob": false,
       "matchPorcentage": 0.0,
       "currency": "",

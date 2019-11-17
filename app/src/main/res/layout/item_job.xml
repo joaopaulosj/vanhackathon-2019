@@ -103,6 +103,7 @@
 				android:layout_marginTop="@dimen/vertical_margin"
 				app:btnBackground="@color/colorPrimary"
 				app:btnText="@string/job_apply_btn"
+				app:btnProgressColor="@color/color_white"
 				app:btnTextColor="@color/color_white"
 				app:layout_constraintBottom_toBottomOf="parent"
 				app:layout_constraintEnd_toEndOf="parent"

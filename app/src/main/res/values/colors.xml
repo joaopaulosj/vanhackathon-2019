@@ -12,6 +12,8 @@
     <color name="colorSecondary">#EF5C11</color>
     <color name="colorSecDark">#C94300</color>
     
+    <color name="colorSuccess">#41B807</color>
+    
     <color name="colorWarningLight">#FFBA36</color>
     <color name="colorWarning">#FCAB0F</color>
     <color name="colorWarningDark">#D68D00</color>

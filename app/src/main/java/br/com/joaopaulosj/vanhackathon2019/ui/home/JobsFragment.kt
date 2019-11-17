@@ -12,15 +12,13 @@ import br.com.joaopaulosj.vanhackathon2019.data.repositories.JobsRepository
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.setup
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.singleSubscribe
 import kotlinx.android.synthetic.main.fragment_jobs.*
+import java.util.concurrent.TimeUnit
 
-class JobsFragment : Fragment() {
+class JobsFragment : Fragment(), JobsAdapter.OnItemClickListener {
 	
 	private val adapter by lazy {
-		val adapter = JobsAdapter(activity!!, object : JobsAdapter.OnItemClickListener {
-			override fun onItemClicked(item: JobResponse) {
-			
-			}
-		})
+		val adapter = JobsAdapter(activity!!, this)
+		adapter.setHasStableIds(true)
 		jobsRv.setup(adapter)
 		adapter
 	}
@@ -38,12 +36,25 @@ class JobsFragment : Fragment() {
 		JobsRepository.getJobs().singleSubscribe(
 				onSuccess = {
 					adapter.mList = it
-				},
-				onError = {
-				
 				}
 		)
 	}
 	
+	override fun onItemClicked(item: JobResponse) {
 	
+	}
+	
+	override fun onFavoriteClicked(itemId: Int) {
+		JobsRepository.setFavorite(itemId)
+				.singleSubscribe(onSuccess = {
+					adapter.mList = it
+				})
+	}
+	
+	override fun onApplyClicked(itemId: Int) {
+		JobsRepository.apply(itemId).delay(2, TimeUnit.SECONDS)
+				.singleSubscribe(onSuccess = {
+					adapter.mList = it
+				})
+	}
 }

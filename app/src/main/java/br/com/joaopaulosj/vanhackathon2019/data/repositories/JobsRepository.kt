@@ -8,10 +8,29 @@ import io.reactivex.Single
 
 object JobsRepository {
 	
+	private var jobs = listOf<JobResponse>()
+	
 	fun getJobs(): Single<List<JobResponse>> {
 		val mock = Resources.read("mock_jobs")
 		val response = Gson().fromJson<JobsResponse>(mock, JobsResponse::class.java)
-		return Single.just(response.jobs)
+		jobs = response.jobs
+		return Single.just(jobs)
+	}
+	
+	fun setFavorite(jobId: Int): Single<List<JobResponse>> {
+		jobs.find { it.id == jobId }?.let {
+			it.favorited = !it.favorited
+		}
+		
+		return Single.just(jobs)
+	}
+	
+	fun apply(jobId: Int): Single<List<JobResponse>> {
+		jobs.find { it.id == jobId }?.let {
+			it.applied = !it.applied
+		}
+		
+		return Single.just(jobs)
 	}
 	
 }
