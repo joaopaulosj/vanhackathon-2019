@@ -45,7 +45,7 @@ class EventResponse(
 		val dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
 		val start = startDate.dateFromString(dateFormat)
 		val end = endDate.dateFromString(dateFormat)
-		return "${start?.displayName("MMMM d")} - ${end?.displayName("d, yyyy")}"
+		return "${start?.displayName("MMMM d")} - ${end?.displayName("d, yyyy")}".capitalize()
 	}
 	
 }
