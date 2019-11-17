@@ -4,13 +4,18 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
-import br.com.joaopaulosj.vanhackathon2019.R
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import br.com.joaopaulosj.vanhackathon2019.data.remote.models.JobResponse
 import br.com.joaopaulosj.vanhackathon2019.ui.base.SimpleBaseRecyclerViewAdapter
+import br.com.joaopaulosj.vanhackathon2019.utils.extensions.dpToPx
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.loadDrawable
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.setHtmlText
+import br.com.joaopaulosj.vanhackathon2019.utils.extensions.setup
 import kotlinx.android.synthetic.main.item_job.view.*
+import kotlin.math.ceil
+
 
 class JobsAdapter(context: Context, private val onItemClickListener: OnItemClickListener) :
 		SimpleBaseRecyclerViewAdapter(context) {
@@ -31,7 +36,7 @@ class JobsAdapter(context: Context, private val onItemClickListener: OnItemClick
 	}
 	
 	override fun getItemViewHolder(parent: ViewGroup): RecyclerView.ViewHolder {
-		val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_job, parent, false)
+		val itemView = LayoutInflater.from(parent.context).inflate(br.com.joaopaulosj.vanhackathon2019.R.layout.item_job, parent, false)
 		return ItemViewHolder(itemView)
 	}
 	
@@ -47,8 +52,26 @@ class JobsAdapter(context: Context, private val onItemClickListener: OnItemClick
 				}
 				jobTitleTv.text = item.positionName.trim()
 				jobDescriptionTv.setHtmlText(item.description)
+				jobDescriptionTv.setOnClickListener {
+					if (jobDescriptionTv.maxLines == 4)
+						jobDescriptionTv.maxLines = Integer.MAX_VALUE
+					else
+						jobDescriptionTv.maxLines = 4
+				}
 				jobCityTv.text = item.city
 				jobFlagIv.loadDrawable(item.getFlagResName())
+				
+				itemView.post {
+					val list = item.getAllSkills()
+					val size = list.sumBy { dpToPx(it.name.length * 8f + 25) }
+					var span = ceil(size.toDouble() / itemView.width).toInt()
+					if (span <= 0) span = 1
+					
+					val adapter = SkillsAdapter(context)
+					val layoutManager = StaggeredGridLayoutManager(span, LinearLayout.HORIZONTAL)
+					jobMustHaveRv.setup(adapter, layoutManager = layoutManager)
+					adapter.mList = list
+				}
 			}
 		}
 	}

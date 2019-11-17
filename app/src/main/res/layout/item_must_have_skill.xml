@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="4dp"
+	android:layout_marginEnd="8dp"
+	android:layout_marginBottom="4dp"
+	android:orientation="horizontal"
+	android:background="@drawable/bg_stroke_must_have_skill"
+	android:paddingStart="@dimen/horizontal_margin_small"
+	android:paddingTop="4dp"
+	android:paddingEnd="@dimen/horizontal_margin_small"
+	android:paddingBottom="4dp">
+	
+	<TextView
+		android:id="@+id/itemSkillTv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:text="teste" />
+	
+	<ImageView
+		android:id="@+id/itemSkillsDotIv"
+		android:layout_width="4dp"
+		android:visibility="gone"
+		android:layout_height="4dp"
+		android:layout_gravity="center_vertical"
+		android:layout_marginStart="4dp"
+		android:background="#00FF00" />
+
+</LinearLayout>

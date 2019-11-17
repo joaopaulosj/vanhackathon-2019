@@ -83,27 +83,31 @@
 				app:layout_constraintTop_toBottomOf="@id/jobCityTv"
 				tools:text="@tools:sample/lorem/random" />
 			
-			<View
-				android:id="@+id/jobSkillsRv"
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/jobMustHaveRv"
 				android:layout_width="match_parent"
-				android:layout_height="30dp"
-				android:layout_marginTop="@dimen/vertical_margin"
-				android:background="@color/color_gray_default"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/vertical_margin_small"
+				android:clipToPadding="false"
+				android:paddingStart="@dimen/horizontal_margin"
+				android:paddingEnd="@dimen/horizontal_margin"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@id/jobDescriptionTv" />
+				app:layout_constraintTop_toBottomOf="@id/jobDescriptionTv"
+				app:layout_goneMarginTop="@dimen/vertical_margin_small" />
 			
 			<br.com.joaopaulosj.vanhackathon2019.ui.widget.ProgressButton
 				android:id="@+id/jobApplyBtn"
 				android:layout_width="match_parent"
 				android:layout_height="50dp"
+				android:layout_marginTop="@dimen/vertical_margin"
 				app:btnBackground="@color/colorPrimary"
 				app:btnText="@string/job_apply_btn"
 				app:btnTextColor="@color/color_white"
 				app:layout_constraintBottom_toBottomOf="parent"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@id/jobSkillsRv" />
+				app:layout_constraintTop_toBottomOf="@id/jobMustHaveRv" />
 		
 		</androidx.constraintlayout.widget.ConstraintLayout>
 	

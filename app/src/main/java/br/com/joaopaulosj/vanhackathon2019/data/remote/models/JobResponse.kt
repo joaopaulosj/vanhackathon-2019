@@ -25,9 +25,15 @@ class JobResponse(
 		return "flag_" + country.replace(" ", "").toLowerCase()
 	}
 	
+	fun getAllSkills(): List<SkillResponse>{
+		mustHaveSkills.forEach { it.mustHave = true }
+		return mustHaveSkills + niceToHaveSkills
+	}
+	
 }
 
 class SkillResponse(
 		val name: String = "",
-		val match: Boolean = false
+		val match: Boolean = false,
+		var mustHave: Boolean = false
 )
