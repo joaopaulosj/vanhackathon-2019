@@ -91,6 +91,7 @@ dependencies {
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     //TESTS
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     //RETROFIT
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
