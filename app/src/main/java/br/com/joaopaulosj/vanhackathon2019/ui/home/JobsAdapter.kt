@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.joaopaulosj.vanhackathon2019.R
 import br.com.joaopaulosj.vanhackathon2019.data.remote.models.JobResponse
 import br.com.joaopaulosj.vanhackathon2019.ui.base.SimpleBaseRecyclerViewAdapter
+import br.com.joaopaulosj.vanhackathon2019.utils.extensions.loadDrawable
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.setHtmlText
 import kotlinx.android.synthetic.main.item_job.view.*
 
@@ -44,9 +45,10 @@ class JobsAdapter(context: Context, private val onItemClickListener: OnItemClick
 				setOnClickListener {
 					onItemClickListener.onItemClicked(item)
 				}
-				jobTitleTv.text = item.positionName
+				jobTitleTv.text = item.positionName.trim()
 				jobDescriptionTv.setHtmlText(item.description)
 				jobCityTv.text = item.city
+				jobFlagIv.loadDrawable(item.getFlagResName())
 			}
 		}
 	}

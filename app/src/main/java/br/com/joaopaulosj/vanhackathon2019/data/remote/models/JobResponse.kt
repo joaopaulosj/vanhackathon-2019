@@ -19,7 +19,13 @@ class JobResponse(
 		val salaryRangeStart: Int = 0,
 		val salaryRangeEnd: Int = 0,
 		val matchPorcentage: Float = 0f
-)
+) {
+	
+	fun getFlagResName(): String{
+		return "flag_" + country.replace(" ", "").toLowerCase()
+	}
+	
+}
 
 class SkillResponse(
 		val name: String = "",
