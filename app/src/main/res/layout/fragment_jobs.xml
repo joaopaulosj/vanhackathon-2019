@@ -1,13 +1,72 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical">
 	
-	<androidx.recyclerview.widget.RecyclerView
-		android:id="@+id/jobsRv"
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/jobsSv"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		tools:listitem="@layout/item_job" />
-
+		android:layout_height="wrap_content">
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:layout_marginStart="@dimen/horizontal_margin"
+				android:layout_marginTop="@dimen/vertical_margin"
+				android:layout_marginEnd="@dimen/horizontal_margin"
+				android:background="@drawable/bg_stroke_main">
+				
+				<ImageView
+					android:id="@+id/jobsFilterBtn"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="@dimen/horizontal_margin_small"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:srcCompat="@drawable/ic_filter" />
+				
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:orientation="horizontal"
+					app:layout_constraintEnd_toStartOf="@id/jobsFilterBtn"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent">
+					
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="@dimen/horizontal_margin_small"
+						app:srcCompat="@drawable/ic_search" />
+					
+					<EditText
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:background="@null"
+						android:hint="Search"
+						android:padding="@dimen/horizontal_margin_small" />
+				
+				</LinearLayout>
+			
+			</androidx.constraintlayout.widget.ConstraintLayout>
+			
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/jobsRv"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				tools:listitem="@layout/item_job" />
+		
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+	
 </LinearLayout>

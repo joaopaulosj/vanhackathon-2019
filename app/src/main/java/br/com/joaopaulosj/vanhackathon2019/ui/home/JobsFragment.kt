@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import br.com.joaopaulosj.vanhackathon2019.R
 import br.com.joaopaulosj.vanhackathon2019.data.remote.models.JobResponse
@@ -18,6 +19,7 @@ class JobsFragment : Fragment(), JobsAdapter.OnItemClickListener {
 	
 	private val adapter by lazy {
 		val adapter = JobsAdapter(activity!!, this)
+		ViewCompat.setNestedScrollingEnabled(jobsRv, false)
 		adapter.setHasStableIds(true)
 		jobsRv.setup(adapter)
 		adapter
