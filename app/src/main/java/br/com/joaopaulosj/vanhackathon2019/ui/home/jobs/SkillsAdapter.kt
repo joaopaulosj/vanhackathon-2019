@@ -1,4 +1,4 @@
-package br.com.joaopaulosj.vanhackathon2019.ui.home
+package br.com.joaopaulosj.vanhackathon2019.ui.home.jobs
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -12,7 +12,6 @@ import br.com.joaopaulosj.vanhackathon2019.ui.base.SimpleBaseRecyclerViewAdapter
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.getColorRes
 import kotlinx.android.synthetic.main.item_must_have_skill.view.*
 import org.jetbrains.anko.backgroundResource
-import org.jetbrains.anko.textColor
 
 class SkillsAdapter(context: Context) : SimpleBaseRecyclerViewAdapter(context) {
 	

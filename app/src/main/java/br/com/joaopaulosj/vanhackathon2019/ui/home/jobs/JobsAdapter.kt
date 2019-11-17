@@ -1,4 +1,4 @@
-package br.com.joaopaulosj.vanhackathon2019.ui.home
+package br.com.joaopaulosj.vanhackathon2019.ui.home.jobs
 
 import android.content.Context
 import android.view.LayoutInflater

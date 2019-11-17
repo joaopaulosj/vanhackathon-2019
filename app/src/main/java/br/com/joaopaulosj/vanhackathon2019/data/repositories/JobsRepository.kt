@@ -33,4 +33,8 @@ object JobsRepository {
 		return Single.just(jobs)
 	}
 	
+	fun getCurrentFilters(): List<String> {
+		return listOf("Canada", "United Kingdom", "0-3 years", "4-6 years")
+	}
+	
 }

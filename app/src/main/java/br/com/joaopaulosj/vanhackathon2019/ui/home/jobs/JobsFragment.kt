@@ -1,5 +1,4 @@
-package br.com.joaopaulosj.vanhackathon2019.ui.home
-
+package br.com.joaopaulosj.vanhackathon2019.ui.home.jobs
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.joaopaulosj.vanhackathon2019.R
 import br.com.joaopaulosj.vanhackathon2019.data.remote.models.JobResponse
 import br.com.joaopaulosj.vanhackathon2019.data.repositories.JobsRepository
@@ -25,6 +25,13 @@ class JobsFragment : Fragment(), JobsAdapter.OnItemClickListener {
 		adapter
 	}
 	
+	private val filtersAdapter by lazy {
+		val adapter = JobFilterAdapter(activity!!)
+		jobsFilterRv.setup(adapter,
+				layoutManager = LinearLayoutManager(activity!!, LinearLayoutManager.HORIZONTAL, false))
+		adapter
+	}
+	
 	override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
 	                          savedInstanceState: Bundle?): View? {
 		val view = inflater.inflate(R.layout.fragment_jobs, container, false)
@@ -38,6 +45,7 @@ class JobsFragment : Fragment(), JobsAdapter.OnItemClickListener {
 		JobsRepository.getJobs().singleSubscribe(
 				onSuccess = {
 					adapter.mList = it
+					filtersAdapter.mList = JobsRepository.getCurrentFilters()
 				}
 		)
 	}

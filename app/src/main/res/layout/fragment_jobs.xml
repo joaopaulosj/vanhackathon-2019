@@ -19,7 +19,7 @@
 				android:layout_width="match_parent"
 				android:layout_height="50dp"
 				android:layout_marginStart="@dimen/horizontal_margin"
-				android:layout_marginTop="@dimen/vertical_margin"
+				android:layout_marginTop="@dimen/vertical_margin_small"
 				android:layout_marginEnd="@dimen/horizontal_margin"
 				android:background="@drawable/bg_stroke_main">
 				
@@ -61,6 +61,17 @@
 			</androidx.constraintlayout.widget.ConstraintLayout>
 			
 			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/jobsFilterRv"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/vertical_margin_small"
+				android:clipToPadding="false"
+				android:overScrollMode="never"
+				android:paddingStart="@dimen/horizontal_margin"
+				android:paddingEnd="@dimen/horizontal_margin"
+				tools:listitem="@layout/item_job_filter" />
+			
+			<androidx.recyclerview.widget.RecyclerView
 				android:id="@+id/jobsRv"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -68,5 +79,5 @@
 		
 		</LinearLayout>
 	</androidx.core.widget.NestedScrollView>
-	
+
 </LinearLayout>
