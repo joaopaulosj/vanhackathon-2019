@@ -15,10 +15,17 @@ import br.com.joaopaulosj.vanhackathon2019.utils.extensions.notImplementedFeatur
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.setup
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.singleSubscribe
 import kotlinx.android.synthetic.main.fragment_jobs.*
+import org.jetbrains.anko.longToast
 import org.jetbrains.anko.sdk25.coroutines.textChangedListener
 import java.util.concurrent.TimeUnit
 
-class JobsFragment : Fragment(), JobsAdapter.OnItemClickListener {
+class JobsFragment : Fragment(), JobsAdapter.OnItemClickListener, JobsContract.View {
+
+    private val presenter: JobsContract.Presenter by lazy {
+        val presenter = JobsPresenter()
+        presenter.attachView(this)
+        presenter
+    }
 
     private val adapter by lazy {
         val adapter = JobsAdapter(activity!!, this)
@@ -48,22 +55,18 @@ class JobsFragment : Fragment(), JobsAdapter.OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        loadJobs()
+        presenter.loadItems()
         setupSearch()
     }
 
-    private fun loadJobs() {
-        JobsRepository.getJobs().singleSubscribe(
-            onSuccess = {
-                adapter.mList = it
-                filtersAdapter.mList = JobsRepository.getCurrentFilters()
-            }
-        )
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.detachView()
     }
 
     private fun setupSearch() {
         jobsEt.addTextWatcherDebounce(200) {
-            JobsRepository.filter(jobsEt.text.toString()).apply {
+            presenter.filter(jobsEt.text.toString()).apply {
                 adapter.mList = this
             }
         }
@@ -74,16 +77,32 @@ class JobsFragment : Fragment(), JobsAdapter.OnItemClickListener {
     }
 
     override fun onFavoriteClicked(itemId: Int) {
-        JobsRepository.setFavorite(itemId)
+        presenter.setFavorite(itemId)
             .singleSubscribe(onSuccess = {
                 adapter.mList = it
             })
     }
 
     override fun onApplyClicked(itemId: Int) {
-        JobsRepository.apply(itemId).delay(2, TimeUnit.SECONDS)
+        presenter.apply(itemId).delay(2, TimeUnit.SECONDS)
             .singleSubscribe(onSuccess = {
                 adapter.mList = it
             })
+    }
+
+    override fun displayItems(items: List<JobResponse>) {
+        adapter.mList = items
+    }
+
+    override fun displayFilters(items: List<String>) {
+        filtersAdapter.mList = JobsRepository.getCurrentFilters()
+    }
+
+    override fun displayError(msg: String?) {
+        activity?.longToast(msg ?: "Error")
+    }
+
+    override fun displayLoading(loading: Boolean) {
+        //todo
     }
 }
