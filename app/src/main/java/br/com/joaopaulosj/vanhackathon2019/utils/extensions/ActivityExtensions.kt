@@ -16,7 +16,7 @@ import java.io.Serializable
 fun Activity.hideKeyboard() {
     currentFocus?.let {
         val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(this.currentFocus.windowToken, 0)
+        imm.hideSoftInputFromWindow(this.currentFocus?.windowToken, 0)
     }
 }
 
@@ -75,12 +75,12 @@ fun <T : Serializable> Activity.getSerializable(key: String): T {
     return intent.getSerializableExtra(key) as T
 }
 
-fun Context.copyToClipboard(content: String) {
-    val clipBoard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?
-    val myClip = ClipData.newPlainText("text", content)
-
-    clipBoard?.primaryClip = myClip
-}
+//fun Context.copyToClipboard(content: String) {
+//    val clipBoard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?
+//    val myClip = ClipData.newPlainText("text", content)
+//
+//    clipBoard?.primaryClip = myClip
+//}
 
 //TOAST METHODS
 fun Context.showToast(string: String) {

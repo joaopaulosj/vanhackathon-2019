@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import br.com.joaopaulosj.vanhackathon2019.Constants
+import br.com.joaopaulosj.vanhackathon2019.AppConstants
 import br.com.joaopaulosj.vanhackathon2019.R
 import br.com.joaopaulosj.vanhackathon2019.ui.base.BaseActivity
 import br.com.joaopaulosj.vanhackathon2019.utils.helpers.FeedbackHelper
@@ -32,8 +32,8 @@ class WebViewActivity : BaseActivity() {
     }
 
     private fun getExtras() {
-        mTitle = intent.getStringExtra(Constants.EXTRA_ACTIVITY_TITLE)
-        mUrl = intent.getStringExtra(Constants.EXTRA_URL)
+        mTitle = intent.getStringExtra(AppConstants.EXTRA_ACTIVITY_TITLE)
+        mUrl = intent.getStringExtra(AppConstants.EXTRA_URL)
     }
 
     private fun loadWebView() {
@@ -51,5 +51,5 @@ class WebViewActivity : BaseActivity() {
 }
 
 fun Context.createWebViewIntent(activityTitle: String, url: String) =
-        intentFor<WebViewActivity>(Constants.EXTRA_ACTIVITY_TITLE to activityTitle,
-                Constants.EXTRA_URL to url)
+        intentFor<WebViewActivity>(AppConstants.EXTRA_ACTIVITY_TITLE to activityTitle,
+                AppConstants.EXTRA_URL to url)

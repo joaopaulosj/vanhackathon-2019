@@ -9,7 +9,7 @@ import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.appcompat.content.res.AppCompatResources
-import br.com.joaopaulosj.vanhackathon2019.Constants
+import br.com.joaopaulosj.vanhackathon2019.AppConstants
 import java.io.File
 import java.util.*
 
@@ -80,7 +80,7 @@ fun rand(from: Int, to: Int): Int {
 
 fun Context.shareFile(file: File) {
     val uri = FileProvider.getUriForFile(this,
-            Constants.PACKAGE_NAME + ".fileprovider",
+            AppConstants.PACKAGE_NAME + ".fileprovider",
             file)
     val share = Intent()
     share.action = Intent.ACTION_SEND

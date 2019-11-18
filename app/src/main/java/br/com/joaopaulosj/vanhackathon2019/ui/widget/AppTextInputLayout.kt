@@ -94,7 +94,7 @@ class AppTextInputLayout : TextInputLayout {
         values.run {
             fieldNeedsValidation = getBoolean(R.styleable.AppTextInputLayout_validation, true)
             emptyErrorText = if (getString(R.styleable.AppTextInputLayout_emptyErrorText) == null) "" else getString(R.styleable.AppTextInputLayout_emptyErrorText)
-            regexErrorText = if (getString(R.styleable.AppTextInputLayout_regexErrorText) == null) "" else getString(R.styleable.AppTextInputLayout_emptyErrorText)
+            regexErrorText = if (getString(R.styleable.AppTextInputLayout_regexErrorText) == null) "" else getString(R.styleable.AppTextInputLayout_emptyErrorText)!!
             invalidErrorText = if (getString(R.styleable.AppTextInputLayout_invalidErrorText) == null) "" else getString(R.styleable.AppTextInputLayout_invalidErrorText)
             inputType = getInt(R.styleable.AppTextInputLayout_inputTextType, TYPE_CUSTOM)
             minLength = getInt(R.styleable.AppTextInputLayout_minLength, 0)

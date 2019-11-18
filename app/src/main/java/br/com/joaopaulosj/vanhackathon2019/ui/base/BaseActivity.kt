@@ -11,7 +11,7 @@ import br.com.joaopaulosj.vanhackathon2019.R
 
 abstract class BaseActivity : AppCompatActivity() {
 
-    protected val TAG = if (javaClass.enclosingClass != null) javaClass.enclosingClass.simpleName else javaClass.simpleName
+    protected val TAG = ""
 
     val context: Context
         get() = this

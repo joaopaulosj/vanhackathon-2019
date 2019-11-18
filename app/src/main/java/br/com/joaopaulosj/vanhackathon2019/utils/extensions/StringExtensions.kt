@@ -11,7 +11,7 @@ import android.text.style.BackgroundColorSpan
 import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
 import android.widget.TextView
-import br.com.joaopaulosj.vanhackathon2019.Constants
+import br.com.joaopaulosj.vanhackathon2019.AppConstants
 import br.com.joaopaulosj.vanhackathon2019.utils.TextMask
 import java.text.NumberFormat
 import java.util.*
@@ -46,12 +46,12 @@ fun Double.formatToCurrency(locale: Locale): String {
  * @return the value with the BRL currency
  */
 fun Float.formatCurrencyBRL(trimRs: Boolean = false): String {
-    val locale = Locale(Constants.LANGUAGE_PT, Constants.COUNTRY_BR)
+    val locale = Locale(AppConstants.LANGUAGE_PT, AppConstants.COUNTRY_BR)
     return if (trimRs) this.formatToCurrency(locale).replace("R$", "") else this.formatToCurrency(locale)
 }
 
 fun Long.formatCurrencyBRL(trimRs: Boolean = false): String {
-    val locale = Locale(Constants.LANGUAGE_PT, Constants.COUNTRY_BR)
+    val locale = Locale(AppConstants.LANGUAGE_PT, AppConstants.COUNTRY_BR)
     val string = (this.toDouble() / 100.0).formatToCurrency(locale)
     return if (trimRs) string.replace("R$", "") else string
 }

@@ -6,7 +6,7 @@ import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import br.com.joaopaulosj.vanhackathon2019.Constants
+import br.com.joaopaulosj.vanhackathon2019.AppConstants
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.loadImage
 import br.com.joaopaulosj.vanhackathon2019.R
 import com.bumptech.glide.request.target.SimpleTarget
@@ -20,7 +20,7 @@ class ExpandedPictureActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_expanded_picture)
         setListener()
-        loadImage(intent.getStringExtra(Constants.EXTRA_PICTURE_URL))
+        loadImage(intent.getStringExtra(AppConstants.EXTRA_PICTURE_URL))
     }
 
     private fun loadImage(url: String) {
@@ -37,6 +37,6 @@ class ExpandedPictureActivity : AppCompatActivity() {
 }
 
 fun Context.createExpandedPictureIntent(url: String): Intent {
-    val intent = intentFor<ExpandedPictureActivity>(Constants.EXTRA_PICTURE_URL to url)
+    val intent = intentFor<ExpandedPictureActivity>(AppConstants.EXTRA_PICTURE_URL to url)
     return intent
 }

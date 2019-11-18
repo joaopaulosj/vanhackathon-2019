@@ -1,6 +1,6 @@
 package br.com.joaopaulosj.vanhackathon2019.utils.extensions
 
-import br.com.joaopaulosj.vanhackathon2019.Constants
+import br.com.joaopaulosj.vanhackathon2019.AppConstants
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -22,7 +22,7 @@ fun String.inMillis(dateFormat: String) =
 
 
 fun String.changeDateFormat(currentDateFormat: String, newDateFormat: String,
-                            locale: Locale = Locale(Constants.LANGUAGE_PT, Constants.COUNTRY_BR), isUTC: Boolean = false): String {
+                            locale: Locale = Locale(AppConstants.LANGUAGE_PT, AppConstants.COUNTRY_BR), isUTC: Boolean = false): String {
     return try {
         val oldDf = SimpleDateFormat(currentDateFormat)
         val date = oldDf.parse(this)
@@ -39,7 +39,7 @@ fun String.changeDateFormat(currentDateFormat: String, newDateFormat: String,
 }
 
 
-fun String.dateFromString(dateFormat: String, locale: Locale = Locale(Constants.LANGUAGE_PT, Constants.COUNTRY_BR),
+fun String.dateFromString(dateFormat: String, locale: Locale = Locale(AppConstants.LANGUAGE_PT, AppConstants.COUNTRY_BR),
                           isUTC: Boolean = false): Date? {
     return try {
         val date = if (isUTC) changeDateFormat(dateFormat, dateFormat, isUTC = true) else this
@@ -98,7 +98,7 @@ fun String.getDate(format: String): Date? {
     return cal.time
 }
 
-fun Calendar.format(dateFormat: String, locale: Locale = Locale(Constants.LANGUAGE_PT, Constants.COUNTRY_BR)): String {
+fun Calendar.format(dateFormat: String, locale: Locale = Locale(AppConstants.LANGUAGE_PT, AppConstants.COUNTRY_BR)): String {
     val sdf = SimpleDateFormat(dateFormat, locale)
     return sdf.format(this.time)
 }
@@ -110,7 +110,7 @@ fun Date.displayName(format: String): String{
     return sdf.format(cal.time)
 }
 
-fun String.calendarFromString(dateFormat: String, locale: Locale = Locale(Constants.LANGUAGE_PT, Constants.COUNTRY_BR),
+fun String.calendarFromString(dateFormat: String, locale: Locale = Locale(AppConstants.LANGUAGE_PT, AppConstants.COUNTRY_BR),
                               isUTC: Boolean = false): Calendar? {
     return try {
         val cal = Calendar.getInstance()

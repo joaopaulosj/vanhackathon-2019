@@ -21,7 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import br.com.joaopaulosj.vanhackathon2019.Constants;
+import br.com.joaopaulosj.vanhackathon2019.AppConstants;
 
 
 public class CameraIntentHelper implements PermissionDispatcherHelper.OnPermissionResult {
@@ -34,7 +34,7 @@ public class CameraIntentHelper implements PermissionDispatcherHelper.OnPermissi
     public static final int REQUEST_TAKE_PICTURE = 600;
     //PERMISSIONS
     private static final String[] STORAGE_PERMISSIONS = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE};
-    private String AUTHORITY = Constants.PACKAGE_NAME + ".fileprovider";
+    private String AUTHORITY = AppConstants.PACKAGE_NAME + ".fileprovider";
     private Activity mActivity;
     private Fragment mFragment;
     private OnCameraResultListener mOnImageResultListener;

@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commonlib/commonlib.iml" filepath="$PROJECT_DIR$/commonlib/commonlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mobilertc/mobilertc.iml" filepath="$PROJECT_DIR$/mobilertc/mobilertc.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/vanhackathon-2019.iml" filepath="$PROJECT_DIR$/.idea/vanhackathon-2019.iml" />
     </modules>
   </component>

@@ -3,7 +3,7 @@ package br.com.joaopaulosj.vanhackathon2019.ui.simplelist
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
-import br.com.joaopaulosj.vanhackathon2019.Constants
+import br.com.joaopaulosj.vanhackathon2019.AppConstants
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.*
 import br.com.joaopaulosj.vanhackathon2019.R
 import br.com.joaopaulosj.vanhackathon2019.ui.base.BaseActivity
@@ -76,4 +76,4 @@ class SimpleListActivity : BaseActivity(), SimpleListContract.View {
 
 //todo change the name of this method according to the name of the activity
 fun Context.createSimpleListIntent(extra: String? = null) =
-        intentFor<SimpleListActivity>(Constants.EXTRA_URL to extra)
+        intentFor<SimpleListActivity>(AppConstants.EXTRA_URL to extra)

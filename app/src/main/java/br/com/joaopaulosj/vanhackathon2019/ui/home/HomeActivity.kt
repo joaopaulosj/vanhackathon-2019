@@ -6,11 +6,12 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.fragment.app.Fragment
-import br.com.joaopaulosj.vanhackathon2019.Constants
+import br.com.joaopaulosj.vanhackathon2019.AppConstants
 import br.com.joaopaulosj.vanhackathon2019.R
 import br.com.joaopaulosj.vanhackathon2019.ui.base.BaseActivity
 import br.com.joaopaulosj.vanhackathon2019.ui.home.events.EventsFragment
 import br.com.joaopaulosj.vanhackathon2019.ui.home.jobs.JobsFragment
+import br.com.joaopaulosj.vanhackathon2019.ui.zoom.createZoomIntent
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.loadCircleImage
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.partial_home_content.*
@@ -41,15 +42,20 @@ class HomeActivity : BaseActivity() {
 				R.string.app_name_default, R.string.app_name_default)
 		homeDrawerLayout.addDrawerListener(mDrawerToggle)
 		
-		toolbar_profile_iv.loadCircleImage(Constants.PROFILE_IMG_URL)
+		toolbar_profile_iv.loadCircleImage(AppConstants.PROFILE_IMG_URL)
 		
 		homeDrawerSlackBtn.setOnClickListener { openSlack() }
+		homeDrawerPremiumBtn.setOnClickListener { openZoom() }
 	}
 	
 	private fun openSlack() {
-		val uri = Uri.parse(Constants.SLACK_CHANNEL_URI)
+		val uri = Uri.parse(AppConstants.SLACK_CHANNEL_URI)
 		val intent = Intent(Intent.ACTION_VIEW, uri)
 		startActivity(intent)
+	}
+	
+	private fun openZoom() {
+		startActivity(createZoomIntent("9540957592"))
 	}
 	
 	private fun setupBottomNavigation() {
