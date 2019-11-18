@@ -30,6 +30,7 @@ class JobsPresenter : JobsContract.Presenter {
                 filtered = it
                 view?.displayLoading(false)
                 view?.displayItems(it)
+                view?.displayFilters(JobsRepository.getCurrentFilters())
             },
             onError = {
                 view?.displayLoading(false)

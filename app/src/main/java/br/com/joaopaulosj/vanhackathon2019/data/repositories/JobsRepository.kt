@@ -15,7 +15,7 @@ object JobsRepository {
     }
 
     fun getCurrentFilters(): List<String> {
-        return listOf("Canada", "United Kingdom", "0-3 years", "4-6 years")
+        return listOf("Canada", "United Kingdom", "Germany", "0-3 years", "4-6 years")
     }
 
 }

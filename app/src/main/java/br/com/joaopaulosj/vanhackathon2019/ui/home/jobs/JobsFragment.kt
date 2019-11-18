@@ -103,6 +103,6 @@ class JobsFragment : Fragment(), JobsAdapter.OnItemClickListener, JobsContract.V
     }
 
     override fun displayLoading(loading: Boolean) {
-        //todo
+
     }
 }

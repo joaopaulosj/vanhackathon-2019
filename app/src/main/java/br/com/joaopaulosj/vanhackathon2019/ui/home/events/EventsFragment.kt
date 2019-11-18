@@ -17,9 +17,16 @@ import br.com.joaopaulosj.vanhackathon2019.utils.extensions.singleSubscribe
 import kotlinx.android.synthetic.main.fragment_events.*
 import android.content.Intent
 import android.provider.CalendarContract
+import org.jetbrains.anko.longToast
 
 
-class EventsFragment : Fragment(), EventsAdapter.OnItemClickListener {
+class EventsFragment : Fragment(), EventsAdapter.OnItemClickListener, EventsContract.View {
+
+    private val presenter: EventsContract.Presenter by lazy {
+        val presenter = EventsPresenter()
+        presenter.attachView(this)
+        presenter
+    }
 
     private val adapter by lazy {
         val adapter = EventsAdapter(activity!!, this)
@@ -39,24 +46,21 @@ class EventsFragment : Fragment(), EventsAdapter.OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        loadEvents()
+        presenter.loadItems()
         setupSearch()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.detachView()
     }
 
     private fun setupSearch() {
         eventsEt.addTextWatcherDebounce(200) {
-            EventsRepository.filter(eventsEt.text.toString()).apply {
+            presenter.filter(eventsEt.text.toString()).apply {
                 adapter.mList = this
             }
         }
-    }
-
-    private fun loadEvents() {
-        EventsRepository.getEvents().singleSubscribe(
-            onSuccess = {
-                adapter.mList = it
-            }
-        )
     }
 
     override fun onItemClicked(item: EventResponse) {
@@ -74,5 +78,17 @@ class EventsFragment : Fragment(), EventsAdapter.OnItemClickListener {
             putExtra(CalendarContract.Events.EVENT_LOCATION, "${item.city}, ${item.country}")
         }
         activity?.startActivity(intent)
+    }
+
+    override fun displayItems(items: List<EventResponse>) {
+        adapter.mList = items
+    }
+
+    override fun displayError(msg: String?) {
+        activity?.longToast(msg ?: "Error")
+    }
+
+    override fun displayLoading(loading: Boolean) {
+
     }
 }
