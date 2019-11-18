@@ -62,7 +62,7 @@ class JobsFragment : Fragment(), JobsAdapter.OnItemClickListener {
     }
 
     private fun setupSearch() {
-        jobsEt.addTextWatcherDebounce(300) {
+        jobsEt.addTextWatcherDebounce(200) {
             JobsRepository.filter(jobsEt.text.toString()).apply {
                 adapter.mList = this
             }
