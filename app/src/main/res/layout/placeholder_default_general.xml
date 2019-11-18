@@ -16,36 +16,14 @@
         tools:src="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/itemDefaultTitleTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@string/font_family_black"
-        android:gravity="center"
-        android:padding="@dimen/horizontal_margin"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/placeholder_default_text_message"
-        tools:text="@tools:sample/lorem" />
-
-    <TextView
         android:id="@+id/itemDefaultLabelTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="@dimen/horizontal_margin"
         android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/placeholder_default_text_message"
+        android:textSize="@dimen/text_subheading"
         tools:lines="2"
         tools:text="@tools:sample/lorem/random" />
-
-    <br.com.joaopaulosj.vanhackathon2019.ui.widget.ProgressButton
-        android:id="@+id/itemDefaultBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/color_white"
-        app:backgroundTint="@color/colorPrimary"
-        app:btnBackground="@color/colorPrimary"
-        app:btnText="@string/placeholder_error_button_label"
-        />
 
 </LinearLayout>

@@ -18,7 +18,7 @@
 	<dimen name="text_caption">12sp</dimen>
 	
 	<!--PLACEHOLDERS-->
-	<dimen name="placeholder_default_icon_size">65dp</dimen>
+	<dimen name="placeholder_default_icon_size">32dp</dimen>
 	<dimen name="placeholder_default_text_message">@dimen/text_title</dimen>
 	
 	<!--DEFAULT-->

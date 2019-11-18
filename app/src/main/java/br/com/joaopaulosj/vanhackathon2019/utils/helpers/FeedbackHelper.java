@@ -157,11 +157,5 @@ public class FeedbackHelper {
         Drawable tintedDrawable = ContextCompat.getDrawable(mContext, drawable).mutate();
         tintedDrawable.setColorFilter(ContextCompat.getColor(mContext, mIconsColor == RESOURCE_NOT_DEFINED ? R.color.colorPrimary : mIconsColor), PorterDuff.Mode.SRC_ATOP);
         ((ImageView) mPlaceholderView.findViewById(R.id.itemDefaultIconIv)).setImageDrawable(tintedDrawable);
-
-        //Button
-        if(refreshClickListener != null){
-            (mPlaceholderView.findViewById(R.id.itemDefaultBtn)).setVisibility(View.VISIBLE);
-            (mPlaceholderView.findViewById(R.id.itemDefaultBtn)).setOnClickListener(refreshClickListener);
-        }
     }
 }

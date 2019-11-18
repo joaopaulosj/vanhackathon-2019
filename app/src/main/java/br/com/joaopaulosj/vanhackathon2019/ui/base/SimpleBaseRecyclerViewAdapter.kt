@@ -70,7 +70,7 @@ abstract class SimpleBaseRecyclerViewAdapter(val context: Context) : RecyclerVie
         onBindRecyclerViewHolder(holder, getRealPosition(position))
         if (holder is PlaceHolderVH) {
             if (holder.getItemViewType() == TYPE_EMPTY) {
-                holder.bind(getEmptyLabel(context), getEmptyIcon(context), null)
+                holder.bind(getEmptyLabel(context), getEmptyIcon(context))
             }
         }
     }
@@ -135,19 +135,15 @@ abstract class SimpleBaseRecyclerViewAdapter(val context: Context) : RecyclerVie
 
     inner class PlaceHolderVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(emptyMsg: String, drawable: Drawable?, refreshClickListener: View.OnClickListener?) {
+        fun bind(emptyMsg: String, drawable: Drawable?) {
             itemView.apply {
                 itemDefaultLabelTv.text = emptyMsg
                 if (drawable == null) {
                     itemDefaultIconIv.visibility = View.GONE
                 } else {
                     val tintedDrawable = drawable.mutate()
-                    tintedDrawable.setColorFilter(ContextCompat.getColor(itemView.context, R.color.colorPrimaryDark), PorterDuff.Mode.SRC_ATOP)
+                    tintedDrawable.setColorFilter(ContextCompat.getColor(itemView.context, R.color.colorPrimary), PorterDuff.Mode.SRC_ATOP)
                     itemDefaultIconIv.setImageDrawable(tintedDrawable)
-                }
-                if (refreshClickListener != null) {
-                    itemDefaultBtn.visibility = View.VISIBLE
-                    itemDefaultBtn.setOnClickListener(refreshClickListener)
                 }
             }
         }
