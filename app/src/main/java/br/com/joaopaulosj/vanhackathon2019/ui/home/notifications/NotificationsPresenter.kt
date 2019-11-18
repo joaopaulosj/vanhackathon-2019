@@ -1,33 +1,34 @@
 package br.com.joaopaulosj.vanhackathon2019.ui.home.notifications
 
+import br.com.joaopaulosj.vanhackathon2019.data.repositories.NotificationsRepository
+import br.com.joaopaulosj.vanhackathon2019.utils.extensions.singleSubscribe
 import io.reactivex.disposables.CompositeDisposable
 
 class NotificationsPresenter : NotificationsContract.Presenter {
 
-    private var mView: NotificationsContract.View? = null
-    private var mDisposable = CompositeDisposable()
+    private var view: NotificationsContract.View? = null
+    private var disposable = CompositeDisposable()
 
     override fun attachView(mvpView: NotificationsContract.View?) {
-        mView = mvpView
+        view = mvpView
     }
 
     override fun detachView() {
-        mView = null
-        mDisposable.dispose()
+        view = null
+        disposable.dispose()
     }
 
     override fun loadItems() {
-        //todo change the repository and the method that is called
-        mView?.displayLoading(true)
-//        mDisposable.add(JsonPlaceholderRepository.getPolls().singleSubscribe(
-//                onSuccess = {
-//                    mView?.displayLoading(false)
-//                    mView?.displayItems(it)
-//                },
-//                onError = {
-//                    mView?.displayLoading(false)
-//                    mView?.displayError(it.message)
-//                }
-//        ))
+        view?.displayLoading(true)
+        disposable.add(NotificationsRepository.getNotifications().singleSubscribe(
+            onSuccess = {
+                view?.displayLoading(false)
+                view?.displayItems(it)
+            },
+            onError = {
+                view?.displayLoading(false)
+                view?.displayError(it.message)
+            }
+        ))
     }
 }

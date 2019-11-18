@@ -5,6 +5,7 @@ import android.os.Bundle
 import br.com.joaopaulosj.vanhackathon2019.R
 import br.com.joaopaulosj.vanhackathon2019.data.remote.models.NotificationResponse
 import br.com.joaopaulosj.vanhackathon2019.ui.base.BaseActivity
+import br.com.joaopaulosj.vanhackathon2019.ui.widget.SimpleDividerItemDecoration
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.finishWithSlideTransition
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.notImplementedFeature
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.setup
@@ -29,7 +30,7 @@ class NotificationsActivity : BaseActivity(), NotificationsContract.View, Notifi
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_swiped_recycler_view)
 
-        setToolbar(getString(R.string.notifications_title), false)
+        setToolbar(getString(R.string.notifications_title), true)
 
         setRecyclerView()
 
@@ -59,7 +60,7 @@ class NotificationsActivity : BaseActivity(), NotificationsContract.View, Notifi
 
     private fun setRecyclerView() {
         swiperefresh.setOnRefreshListener { presenter.loadItems() }
-        recyclerview.setup(adapter)
+        recyclerview.setup(adapter, decoration = SimpleDividerItemDecoration(this))
     }
 
     override fun displayLoading(loading: Boolean) {
