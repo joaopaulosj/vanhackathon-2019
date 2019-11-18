@@ -13,6 +13,7 @@
         android:layout_width="@dimen/placeholder_default_icon_size"
         android:layout_height="@dimen/placeholder_default_icon_size"
         android:scaleType="fitCenter"
+        android:visibility="gone"
         tools:src="@tools:sample/avatars" />
 
     <TextView
