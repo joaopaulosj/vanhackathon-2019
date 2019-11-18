@@ -15,6 +15,9 @@ import br.com.joaopaulosj.vanhackathon2019.utils.extensions.notImplementedFeatur
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.setup
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.singleSubscribe
 import kotlinx.android.synthetic.main.fragment_events.*
+import android.content.Intent
+import android.provider.CalendarContract
+
 
 class EventsFragment : Fragment(), EventsAdapter.OnItemClickListener {
 
@@ -58,5 +61,18 @@ class EventsFragment : Fragment(), EventsAdapter.OnItemClickListener {
 
     override fun onItemClicked(item: EventResponse) {
         activity?.notImplementedFeature()
+    }
+
+    override fun onCalendarClicked(item: EventResponse) {
+        val intent = Intent(Intent.ACTION_EDIT).apply {
+            type = "vnd.android.cursor.item/event"
+            putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, item.getStart())
+            putExtra(CalendarContract.EXTRA_EVENT_END_TIME, item.getEnd())
+            putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true)
+            putExtra(CalendarContract.Events.TITLE, item.name)
+            putExtra(CalendarContract.Events.DESCRIPTION, item.subtitle)
+            putExtra(CalendarContract.Events.EVENT_LOCATION, "${item.city}, ${item.country}")
+        }
+        activity?.startActivity(intent)
     }
 }

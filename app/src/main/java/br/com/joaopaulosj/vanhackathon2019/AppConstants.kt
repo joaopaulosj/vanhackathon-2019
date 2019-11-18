@@ -9,6 +9,7 @@ object AppConstants {
     const val EASTER_EGG_URL = "http://www.mobile2you.com.br/wp-content/themes/twentyfifteen/images/team.png"
     const val PROFILE_IMG_URL = "https://vanhack.com/platform/MvcUser/getInstancePhoto?entityId=178334"
     const val SLACK_CHANNEL_URI = "slack://channel?team=T0CLCJ1AM"
+    const val DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss"
 
 
     //GENERAL
