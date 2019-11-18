@@ -99,7 +99,7 @@ fun Context.showErrorToast(msg: String?) {
 }
 
 fun Context.notImplementedFeature() {
-    longToast("Coming soon")
+    longToast("Feature not available yet")
 }
 
 fun Context.openVideoPlayer(video: String?) {
