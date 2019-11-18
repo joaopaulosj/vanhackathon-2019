@@ -38,7 +38,7 @@ class JobsAdapter(context: Context, private val onItemClickListener: OnItemClick
 	}
 	
 	override fun getItemViewHolder(parent: ViewGroup): RecyclerView.ViewHolder {
-		val itemView = LayoutInflater.from(parent.context).inflate(br.com.joaopaulosj.vanhackathon2019.R.layout.item_job, parent, false)
+		val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_job, parent, false)
 		return ItemViewHolder(itemView)
 	}
 	
