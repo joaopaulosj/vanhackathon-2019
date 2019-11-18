@@ -11,6 +11,7 @@ import android.os.Handler
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import br.com.joaopaulosj.vanhackathon2019.R
+import org.jetbrains.anko.longToast
 import java.io.Serializable
 
 fun Activity.hideKeyboard() {
@@ -39,8 +40,10 @@ fun Activity.startActivityFadeTransition(intent: Intent, requestCode: Int? = nul
     startActivityTransition(intent, R.anim.anim_fade_out, R.anim.anim_fade_in, 1, requestCode)
 }
 
-fun Activity.startActivityTransition(intent: Intent, idAnimationOut: Int,
-                                     idAnimationIn: Int, delay: Long, requestCode: Int? = null) {
+fun Activity.startActivityTransition(
+    intent: Intent, idAnimationOut: Int,
+    idAnimationIn: Int, delay: Long, requestCode: Int? = null
+) {
     if (requestCode == null) {
         Handler().postDelayed({
             this.startActivity(intent)
@@ -95,7 +98,11 @@ fun Context.showErrorToast(msg: String?) {
     showLongToast(msg ?: getString(R.string.placeholder_error_label))
 }
 
-fun Context.openVideoPlayer(video: String?){
+fun Context.notImplementedFeature() {
+    longToast("Coming soon")
+}
+
+fun Context.openVideoPlayer(video: String?) {
     val intent = Intent(Intent.ACTION_VIEW)
     intent.setDataAndType(Uri.parse(video), "video/*")
     startActivity(intent)

@@ -4,8 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/commonlib/commonlib.iml" filepath="$PROJECT_DIR$/commonlib/commonlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flutter-vanhackathon-2019.iml" filepath="$PROJECT_DIR$/flutter-vanhackathon-2019.iml" />
       <module fileurl="file://$PROJECT_DIR$/mobilertc/mobilertc.iml" filepath="$PROJECT_DIR$/mobilertc/mobilertc.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/vanhackathon-2019.iml" filepath="$PROJECT_DIR$/.idea/vanhackathon-2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/vanhackathon-2019-app.iml" filepath="$PROJECT_DIR$/app/vanhackathon-2019-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commonlib/vanhackathon-2019-commonlib.iml" filepath="$PROJECT_DIR$/commonlib/vanhackathon-2019-commonlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mobilertc/vanhackathon-2019-mobilertc.iml" filepath="$PROJECT_DIR$/mobilertc/vanhackathon-2019-mobilertc.iml" />
     </modules>
   </component>
 </project>
