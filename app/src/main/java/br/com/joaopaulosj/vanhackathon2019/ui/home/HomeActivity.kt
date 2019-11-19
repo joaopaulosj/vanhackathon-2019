@@ -8,6 +8,7 @@ import android.os.Handler
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import br.com.joaopaulosj.vanhackathon2019.AppConstants
 import br.com.joaopaulosj.vanhackathon2019.R
@@ -87,11 +88,11 @@ class HomeActivity : BaseActivity() {
 	}
 	
 	private fun setupMockWebinar() {
+		toolbar.setOnLongClickListener {
+			homeNotificationBar.setVisible(homeNotificationBar.isVisible.not())
+			true
+		}
 		homeNotificationBar.setOnClickListener { openZoom() }
-		
-		Handler().postDelayed({
-			homeNotificationBar.setVisible(true)
-		}, 10000)
 	}
 	
 	private fun setupBottomNavigation() {
