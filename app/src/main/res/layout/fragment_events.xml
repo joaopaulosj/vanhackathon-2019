@@ -6,7 +6,6 @@
 	android:orientation="vertical">
 	
 	<androidx.core.widget.NestedScrollView
-		android:id="@+id/eventsSv"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content">
 		
@@ -62,7 +61,6 @@
 			</androidx.constraintlayout.widget.ConstraintLayout>
 			
 			<androidx.recyclerview.widget.RecyclerView
-				android:id="@+id/eventsFilterRv"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="@dimen/vertical_margin_small"

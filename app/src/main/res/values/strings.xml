@@ -1,25 +1,17 @@
 <resources>
-    <string name="google_maps_key"></string>
-    <string name="facebook_app_id"></string>
-
-    <string name="app_name_default">VanHack</string>
+	
+	<string name="app_name_default">VanHack</string>
     <string name="app_name_debug">-debug-vanhack</string>
 
     <!--DIALOG MESSAGES-->
-    <string name="progress_dialog_standard_msg">Wait a moment.</string>
-
-    <!--NETWORK ERRORS-->
-    <string name="network_error_timeout">Erro inesperado, por favor tente novamente.</string>
-    <string name="network_error_without_connection">Rede indisponível.</string>
-    <string name="network_error_unknown">Erro desconhecido, não foi possível completar sua requisição.</string>
-
-    <!--PLACEHOLDERS LABELS-->
+	
+	<!--NETWORK ERRORS-->
+	
+	<!--PLACEHOLDERS LABELS-->
     <string name="placeholder_empty_label">No results found.</string>
-    <string name="placeholder_empty_title">Erro!</string>
-    <string name="placeholder_error_label">There was an unexpected error.</string>
-    <string name="placeholder_error_button_label">Try again</string>
-
-    <!--AppTextInputLayout DEFAULT FEEDBACKS-->
+	<string name="placeholder_error_label">There was an unexpected error.</string>
+	
+	<!--AppTextInputLayout DEFAULT FEEDBACKS-->
     <string name="apptextinputlayout_invalid_field">Campo %s inválido.</string>
     <string name="apptextinputlayout_empty_field">Campo %s não pode estar vazio.</string>
     <string name="apptextinputlayout_regex_field">%s não atende aos critérios exigidos.</string>
@@ -30,44 +22,20 @@
     <string name="snack_error_msg">Houve um erro</string>
 
     <!--SIMPLE LIST-->
-    <string name="simple_list_title">Lista Simples</string>
-    <string name="loading_title">Activity com Loading</string>
-
-    <!--UPDATE MEDIA-->
-    <string name="update_media_camera">Usar câmera</string>
-    <string name="update_media_remove">Remover imagem</string>
-    <string name="update_media_image_album">Escolher imagem do álbum</string>
-    <string name="update_media_video_album">Escolher video do álbum</string>
-    <string name="dialog_title_select_an_option">Selecione uma opção</string>
-
-    <!--FONT FAMILY-->
-    <string name="font_family_regular">sans-serif</string>
-    <string name="font_family_light">sans-serif-light</string>
-    <string name="font_family_condensed">sans-serif-condensed</string>
-    <string name="font_family_black">sans-serif-black</string>
-    <string name="font_family_thin">sans-serif-thin</string>
-    <string name="font_family_medium">sans-serif-medium</string>
-
-    <!--LOGIN ACTIVITY-->
-    <string name="login_forgot_pass">Esqueceu a Senha?</string>
-    <string name="login_create_account">Não tem uma conta?\nCriar nova conta</string>
-    <string name="login_email_hint">E-mail</string>
-    <string name="login_password_hint">Senha</string>
-    <string name="login_signin">Entrar</string>
-    <string name="login_error_email">E-mail Inválido</string>
-    <string name="login_error_password">A senha deve possuir pelo menos %d caracteres.</string>
-    <string name="unknown_error">Erro Desconhecido</string>
-    <string name="forgot_password_confirm_email">Confirmar E-mail</string>
-    <string name="forgot_password_send">Enviar</string>
-
-    <!--	HOME-->
+	
+	<!--UPDATE MEDIA-->
+	
+	<!--FONT FAMILY-->
+	
+	<!--LOGIN ACTIVITY-->
+	
+	<!--	HOME-->
     <string name="drawer_premium_button">Become Premium!</string>
     <string name="drawer_english_button">English Verification</string>
     <string name="drawer_code_button">Code Verification</string>
     <string name="drawer_referral_button">Referral Program</string>
     <string name="drawer_subscription_button">Subscription</string>
-    <string name="drawer_settings_button">Settings</string>
-    <string name="drawer_courses_button">Courses</string>
+	<string name="drawer_courses_button">Courses</string>
     <string name="drawer_library_button">Library</string>
     <string name="drawer_slack_button">Slack</string>
     <string name="drawer_about_button">About</string>
