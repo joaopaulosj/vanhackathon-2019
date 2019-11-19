@@ -100,6 +100,7 @@
 				android:layout_height="wrap_content"
 				android:orientation="vertical">
 				
+				
 				<TextView
 					android:id="@+id/homeDrawerPremiumBtn"
 					android:layout_width="match_parent"
@@ -193,6 +194,30 @@
 					android:paddingTop="@dimen/drawer_item_padding"
 					android:paddingBottom="@dimen/drawer_item_padding"
 					android:text="@string/drawer_slack_button"
+					android:textColor="@color/color_white"
+					android:textSize="@dimen/drawer_item_font_size" />
+				
+				<TextView
+					android:id="@+id/homeDrawerAboutBtn"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="?selectableItemBackground"
+					android:paddingStart="16dp"
+					android:paddingTop="@dimen/drawer_item_padding"
+					android:paddingBottom="@dimen/drawer_item_padding"
+					android:text="@string/drawer_about_button"
+					android:textColor="@color/color_white"
+					android:textSize="@dimen/drawer_item_font_size" />
+				
+				<TextView
+					android:id="@+id/homeDrawerFaqBtn"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="?selectableItemBackground"
+					android:paddingStart="16dp"
+					android:paddingTop="@dimen/drawer_item_padding"
+					android:paddingBottom="@dimen/drawer_item_padding"
+					android:text="@string/drawer_faq_button"
 					android:textColor="@color/color_white"
 					android:textSize="@dimen/drawer_item_font_size" />
 				

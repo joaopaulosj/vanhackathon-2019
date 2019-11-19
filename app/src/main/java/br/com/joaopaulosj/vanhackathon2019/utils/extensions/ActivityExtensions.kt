@@ -14,18 +14,6 @@ import br.com.joaopaulosj.vanhackathon2019.R
 import org.jetbrains.anko.longToast
 import java.io.Serializable
 
-fun Activity.hideKeyboard() {
-    currentFocus?.let {
-        val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(this.currentFocus?.windowToken, 0)
-    }
-}
-
-fun Context.showKeyboard() {
-    val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-    imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0)
-}
-
 fun Context.isNetworkConnected(): Boolean {
     val cm = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
     val activeNetwork = cm.activeNetworkInfo
@@ -62,28 +50,10 @@ fun Activity.finishWithSlideTransition() {
     overridePendingTransition(R.anim.anim_open_scale, R.anim.slide_out_right)
 }
 
-fun Activity.finishWithFadeTransition() {
-    finish()
-    overridePendingTransition(R.anim.anim_fade_in, R.anim.anim_fade_out)
-}
-
-fun Activity.finishWithTransition(idAnimationOut: Int, idAnimationIn: Int, delay: Long) {
-    Handler().postDelayed({
-        this.finish()
-        this.overridePendingTransition(idAnimationIn, idAnimationOut)
-    }, delay)
-}
 
 fun <T : Serializable> Activity.getSerializable(key: String): T {
     return intent.getSerializableExtra(key) as T
 }
-
-//fun Context.copyToClipboard(content: String) {
-//    val clipBoard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?
-//    val myClip = ClipData.newPlainText("text", content)
-//
-//    clipBoard?.primaryClip = myClip
-//}
 
 //TOAST METHODS
 fun Context.showToast(string: String) {
@@ -99,7 +69,7 @@ fun Context.showErrorToast(msg: String?) {
 }
 
 fun Context.notImplementedFeature() {
-    longToast("Feature not available yet")
+    longToast("Feature not implemented")
 }
 
 fun Context.openVideoPlayer(video: String?) {

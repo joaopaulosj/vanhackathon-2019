@@ -4,9 +4,27 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:animateLayoutChanges="true"
 	android:orientation="vertical">
 	
 	<include layout="@layout/partial_toolbar" />
+	
+	<FrameLayout
+		android:id="@+id/homeNotificationBar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/colorSecondary"
+		android:visibility="gone">
+		
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:padding="@dimen/vertical_margin_small"
+			android:text="The VanHackathon webinar is live now!"
+			android:textColor="@color/color_white" />
+	
+	</FrameLayout>
 	
 	<FrameLayout
 		android:id="@+id/homeFragmentContainer"

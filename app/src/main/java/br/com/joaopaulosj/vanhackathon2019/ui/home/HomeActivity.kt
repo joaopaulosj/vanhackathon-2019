@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -16,6 +17,7 @@ import br.com.joaopaulosj.vanhackathon2019.ui.home.jobs.JobsFragment
 import br.com.joaopaulosj.vanhackathon2019.ui.home.notifications.createNotificationsIntent
 import br.com.joaopaulosj.vanhackathon2019.ui.zoom.createZoomIntent
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.loadCircleImage
+import br.com.joaopaulosj.vanhackathon2019.utils.extensions.setVisible
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.startActivitySlideTransition
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.partial_home_content.*
@@ -40,6 +42,7 @@ class HomeActivity : BaseActivity() {
 		
 		setupDrawerLayout()
 		setupBottomNavigation()
+		setupMockWebinar()
 	}
 	
 	override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -81,6 +84,14 @@ class HomeActivity : BaseActivity() {
 	
 	private fun openNotifications() {
 		startActivitySlideTransition(createNotificationsIntent())
+	}
+	
+	private fun setupMockWebinar() {
+		homeNotificationBar.setOnClickListener { openZoom() }
+		
+		Handler().postDelayed({
+			homeNotificationBar.setVisible(true)
+		}, 10000)
 	}
 	
 	private fun setupBottomNavigation() {

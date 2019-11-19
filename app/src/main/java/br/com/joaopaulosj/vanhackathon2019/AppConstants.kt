@@ -10,7 +10,7 @@ object AppConstants {
     const val PROFILE_IMG_URL = "https://vanhack.com/platform/MvcUser/getInstancePhoto?entityId=178334"
     const val SLACK_CHANNEL_URI = "slack://channel?team=T0CLCJ1AM"
     const val DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss"
-    const val ZOOM_US_MEETING_NUMBER = "9540957592"
+    const val ZOOM_US_MEETING_NUMBER = "6675138979"
 
 
     //GENERAL

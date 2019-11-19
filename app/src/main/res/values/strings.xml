@@ -70,6 +70,8 @@
     <string name="drawer_courses_button">Courses</string>
     <string name="drawer_library_button">Library</string>
     <string name="drawer_slack_button">Slack</string>
+    <string name="drawer_about_button">About</string>
+    <string name="drawer_faq_button">FAQ</string>
     <string name="drawer_logout_button">Sign out</string>
 
     <!--    Notifications-->
