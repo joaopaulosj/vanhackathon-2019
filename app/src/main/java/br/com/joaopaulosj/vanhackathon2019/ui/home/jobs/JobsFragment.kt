@@ -17,6 +17,7 @@ import br.com.joaopaulosj.vanhackathon2019.utils.extensions.singleSubscribe
 import kotlinx.android.synthetic.main.fragment_jobs.*
 import org.jetbrains.anko.longToast
 import org.jetbrains.anko.sdk25.coroutines.textChangedListener
+import org.jetbrains.anko.share
 import java.util.concurrent.TimeUnit
 
 class JobsFragment : Fragment(), JobsAdapter.OnItemClickListener, JobsContract.View {
@@ -89,7 +90,11 @@ class JobsFragment : Fragment(), JobsAdapter.OnItemClickListener, JobsContract.V
                 adapter.mList = it
             })
     }
-
+    
+    override fun onItemLongClicked(item: JobResponse) {
+        activity?.share(item.getShareMessage())
+    }
+    
     override fun displayItems(items: List<JobResponse>) {
         adapter.mList = items
     }

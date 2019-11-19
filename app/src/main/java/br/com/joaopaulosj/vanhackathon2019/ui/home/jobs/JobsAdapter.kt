@@ -44,6 +44,7 @@ class JobsAdapter(context: Context, private val onItemClickListener: OnItemClick
 	
 	interface OnItemClickListener {
 		fun onItemClicked(item: JobResponse)
+		fun onItemLongClicked(item: JobResponse)
 		fun onFavoriteClicked(itemId: Int)
 		fun onApplyClicked(itemId: Int)
 	}
@@ -54,6 +55,12 @@ class JobsAdapter(context: Context, private val onItemClickListener: OnItemClick
 				setOnClickListener {
 					onItemClickListener.onItemClicked(item)
 				}
+				
+				setOnLongClickListener {
+					onItemClickListener.onItemLongClicked(item)
+					true
+				}
+				
 				jobApplyBtn.setLoading(false)
 				if (item.applied) {
 					jobApplyBtn.setText("APPLIED")

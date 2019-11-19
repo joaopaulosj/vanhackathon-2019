@@ -21,13 +21,18 @@ class JobResponse(
 		val matchPorcentage: Float = 0f
 ) {
 	
-	fun getFlagResName(): String{
+	fun getFlagResName(): String {
 		return "flag_" + country.replace(" ", "").toLowerCase()
 	}
 	
-	fun getAllSkills(): List<SkillResponse>{
+	fun getAllSkills(): List<SkillResponse> {
 		mustHaveSkills.forEach { it.mustHave = true }
 		return mustHaveSkills + niceToHaveSkills
+	}
+	
+	fun getShareMessage(): String {
+		val url = "https://vanhack.com/platform/#/jobs/$id"
+		return "Check out this job from $city available on VanHack!\n\n$positionName - $url"
 	}
 	
 }
