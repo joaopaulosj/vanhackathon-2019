@@ -9,6 +9,7 @@ import br.com.joaopaulosj.vanhackathon2019.Constants
 import br.com.joaopaulosj.vanhackathon2019.Constants.APP_KEY
 import br.com.joaopaulosj.vanhackathon2019.Constants.APP_SECRET
 import br.com.joaopaulosj.vanhackathon2019.R
+import br.com.joaopaulosj.vanhackathon2019.data.local.LoggedUser
 import br.com.joaopaulosj.vanhackathon2019.ui.base.BaseActivity
 import org.jetbrains.anko.intentFor
 import us.zoom.sdk.*
@@ -48,7 +49,7 @@ class ZoomActivity : BaseActivity(), Constants, ZoomSDKInitializeListener,
 		opts.no_invite = true;
 		
 		val params = JoinMeetingParams()
-		params.displayName = "Joao Paulo"
+		params.displayName = LoggedUser.name
 		params.meetingNo = meetingNo
 		
 		meetingService.joinMeetingWithParams(this, params, opts)
