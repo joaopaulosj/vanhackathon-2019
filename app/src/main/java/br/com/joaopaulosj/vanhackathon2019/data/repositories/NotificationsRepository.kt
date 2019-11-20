@@ -9,7 +9,7 @@ import io.reactivex.Single
 object NotificationsRepository {
 
     fun getNotifications(): Single<List<NotificationResponse>> {
-        val mock = Resources.read("mock_notifications")
+        val mock = Resources.read("mock_notification")
         val response = Gson().fromJson<NotificationsResponse>(mock, NotificationsResponse::class.java)
         return Single.just(response.result)
     }

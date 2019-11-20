@@ -1,0 +1,67 @@
+{
+  "result": [
+    {
+      "id": 1,
+      "title": "VanHackathon Webinar",
+      "description": "The VanHackathon webinar will start tomorrow 6PM PST and will be transmitted live on our app!",
+      "isRead": false,
+      "date": "2019-11-19T23:59:59"
+    },
+    {
+      "id": 2,
+      "title": "New Blog Post",
+      "description": "A new article has been posted on our blog showing a great app developed by João Paulo in the last VanHackathon. Click here to read it now!",
+      "isRead": false,
+      "date": "2019-11-18T23:59:59"
+    },
+    {
+      "id": 3,
+      "title": "New Job Available! \uD83D\uDE80",
+      "description": "Check out the new job available: Senior Front End Engineer in Calgary, Canada. Click to see more details or check on the jobs feed.",
+      "isRead": false,
+      "date": "2019-11-16T23:59:59"
+    },
+    {
+      "id": 4,
+      "title": "Last days to apply for Leap Ontario",
+      "description": "Hey! You have only four days to apply for the Leap Ontario 2020, click here to open the details screen of the event!",
+      "isRead": true,
+      "date": "2019-11-16T23:59:59"
+    },
+    {
+      "id": 5,
+      "title": "New Course Available!",
+      "description": "Check out the new VanHack course: How to improve your business by hiring João Paulo SJ!",
+      "isRead": true,
+      "date": "2019-11-13T23:59:59"
+    },
+    {
+      "id": 6,
+      "title": "New Job Available! \uD83D\uDE80",
+      "description": "Check out the new job available: Senior Mobile App in Vancouver, Canada. Click to see more details or check on the jobs feed.",
+      "isRead": true,
+      "date": "2019-11-13T23:59:59"
+    },
+    {
+      "id": 7,
+      "title": "Job Fair: Your application status has been updated",
+      "description": "A final decision has been reached on your application for the Leap Vancouver - Job Fair. We are sorry to inform you were not selected at this time.",
+      "isRead": true,
+      "date": "2019-11-12T23:59:59"
+    },
+    {
+      "id": 8,
+      "title": "Your English level has been updated",
+      "description": "Thank you for completing the English Verification Test. The result of your English Verification can be found on your VanHack Profile.",
+      "isRead": true,
+      "date": "2019-11-11T23:59:59"
+    },
+    {
+      "id": 9,
+      "title": "The next events to help you get hired",
+      "description": "Click to check the next events happening in VanHack that can help tech talents get hired abroad.",
+      "isRead": true,
+      "date": "2019-11-09T23:59:59"
+    }
+  ]
+}

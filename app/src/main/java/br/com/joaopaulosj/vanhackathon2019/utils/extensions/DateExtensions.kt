@@ -23,7 +23,7 @@ fun Date.displayName(format: String): String {
 	return sdf.format(cal.time)
 }
 
-fun String.calendarFromString(dateFormat: String, locale: Locale = Locale(AppConstants.LANGUAGE_PT, AppConstants.COUNTRY_BR),
+fun String.calendarFromString(dateFormat: String, locale: Locale = Locale.CANADA,
                               isUTC: Boolean = false): Calendar? {
 	return try {
 		val cal = Calendar.getInstance()
