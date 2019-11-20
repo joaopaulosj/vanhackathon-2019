@@ -24,10 +24,6 @@ fun Activity.startActivitySlideTransition(intent: Intent, requestCode: Int? = nu
     startActivityTransition(intent, R.anim.anim_close_scale, R.anim.slide_in_left, 1, requestCode)
 }
 
-fun Activity.startActivityFadeTransition(intent: Intent, requestCode: Int? = null) {
-    startActivityTransition(intent, R.anim.anim_fade_out, R.anim.anim_fade_in, 1, requestCode)
-}
-
 fun Activity.startActivityTransition(
     intent: Intent, idAnimationOut: Int,
     idAnimationIn: Int, delay: Long, requestCode: Int? = null
@@ -70,10 +66,4 @@ fun Context.showErrorToast(msg: String?) {
 
 fun Context.notImplementedFeature() {
     longToast("Feature not implemented")
-}
-
-fun Context.openVideoPlayer(video: String?) {
-    val intent = Intent(Intent.ACTION_VIEW)
-    intent.setDataAndType(Uri.parse(video), "video/*")
-    startActivity(intent)
 }

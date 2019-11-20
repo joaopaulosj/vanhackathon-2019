@@ -10,7 +10,6 @@ import br.com.joaopaulosj.vanhackathon2019.utils.extensions.finishWithSlideTrans
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.notImplementedFeature
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.setup
 import br.com.joaopaulosj.vanhackathon2019.utils.extensions.showSnack
-import br.com.joaopaulosj.vanhackathon2019.utils.extensions.str
 import kotlinx.android.synthetic.main.activity_swiped_recycler_view.*
 import org.jetbrains.anko.intentFor
 
@@ -52,7 +51,7 @@ class NotificationsActivity : BaseActivity(), NotificationsContract.View, Notifi
 
     override fun displayError(msg: String?) {
         showSnack(swipedRecyclerViewCoordinator,
-            msg ?: str(R.string.snack_error_msg),
+            msg ?: getString(R.string.snack_error_msg),
             getString(R.string.snack_error_try_again_msg), {
                 presenter.loadItems()
             })

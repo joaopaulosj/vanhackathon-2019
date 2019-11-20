@@ -7,46 +7,33 @@ import android.webkit.WebViewClient
 import br.com.joaopaulosj.vanhackathon2019.AppConstants
 import br.com.joaopaulosj.vanhackathon2019.R
 import br.com.joaopaulosj.vanhackathon2019.ui.base.BaseActivity
-import br.com.joaopaulosj.vanhackathon2019.utils.helpers.FeedbackHelper
 import kotlinx.android.synthetic.main.activity_webview.*
 import org.jetbrains.anko.intentFor
 
 class WebViewActivity : BaseActivity() {
-    private lateinit var mTitle: String
-    private lateinit var mUrl: String
-    private lateinit var mFeedbackHelper: FeedbackHelper
+    private lateinit var title: String
+    private lateinit var url: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webview)
-        setFeedbacks()
         getExtras()
         loadWebView()
-        setToolbar(mTitle, true)
+        setToolbar(title, true)
     }
-
-    private fun setFeedbacks() {
-        mFeedbackHelper = FeedbackHelper(this, webviewContainer) {
-            webview.reload()
-        }
-    }
-
+    
     private fun getExtras() {
-        mTitle = intent.getStringExtra(AppConstants.EXTRA_ACTIVITY_TITLE)
-        mUrl = intent.getStringExtra(AppConstants.EXTRA_URL)
+        title = intent.getStringExtra(AppConstants.EXTRA_ACTIVITY_TITLE)
+        url = intent.getStringExtra(AppConstants.EXTRA_URL)
     }
 
     private fun loadWebView() {
         webview.webViewClient = object: WebViewClient() {
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                mFeedbackHelper.dismissFeedback()
-
             }
         }
-        webview.loadUrl(mUrl)
-        mFeedbackHelper.startLoading()
-
+        webview.loadUrl(url)
     }
 }
 

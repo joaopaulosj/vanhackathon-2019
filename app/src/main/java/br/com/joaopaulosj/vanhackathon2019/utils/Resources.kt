@@ -19,7 +19,6 @@ object Resources {
 				responseStrBuilder.append(inputStr)
 				inputStr = streamReader.readLine()
 			}
-//			val json = JSONObject(responseStrBuilder.toString())
 			return responseStrBuilder.toString()
 		}
 		
